@@ -1,6 +1,7 @@
 const chalk = require('chalk')
 const Discord = require('discord.js')
-let userSchema = require('../Models/User')
+require('dotenv').config()
+
 module.exports = (client, message) => {
     if (message.author.bot) return
     if (message.channel.type === 'dm') {
