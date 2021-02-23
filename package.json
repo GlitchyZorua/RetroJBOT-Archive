@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Jacobwworkman/RetroJBOT/issues"
   },
-  "homepage": "https://github.com/Jacobwworkman/RetroJBOT#readme"
+  "homepage": "https://github.com/Jacobwworkman/RetroJBOT#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
 }
