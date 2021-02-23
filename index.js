@@ -4,7 +4,7 @@ const path = require('path')
 const chalk = require('chalk')
 
 const client = new Discord.Client()
-
+require('dotenv').config()
 client.login(process.env.TOKEN)
 client.commands = new Discord.Collection()
 
