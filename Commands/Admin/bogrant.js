@@ -1,11 +1,18 @@
+const fs = require('fs-extra')
+var adminlist = fs.readJSONSync('./admins.txt')
+const Discord = require('discord.js')
 module.exports = {
     name: 'bogrant',
     async execute(client, message) {
-    if (!adminlist.admins.includes(message.author.id)) {
+      if (!adminlist.admins.includes(message.author.id)) {
       message.channel.send(':x: Error: No Admin!')
       return;
     }
     let idtoadd = message.content.slice(10)
+    if (idtoadd === "") {
+message.channel.send(":warning: Syntax error: `j.bogrant <#>`\nPlease try again.")
+return
+    }
     if (adminlist.admins.includes(idtoadd)) {
       message.channel.send(':x: Error: This admin already exists.');
       return;

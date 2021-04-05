@@ -1,6 +1,5 @@
-var a0 = A[Math.floor(Math.random() * A.length)]
-var b0 = B[Math.floor(Math.random() * B.length)]
-var c0 = C[Math.floor (Math.random() * C.length)]
+const Discord = require("discord.js");
+
 var A = [
   "retro-engineering",
   "reverse engineering",
@@ -124,8 +123,11 @@ C = [
   "web3.0",
   "fixing the internet",
 ];
+var a0 = A[Math.floor(Math.random() * A.length)]
+var b0 = B[Math.floor(Math.random() * B.length)]
+var c0 = C[Math.floor (Math.random() * C.length)]
 module.exports = {
-    name: 'cards',
+    name: 'manifesto',
     async execute(client, message, args) {
       var embed = new Discord.MessageEmbed()
       .setColor('#00b7ff')

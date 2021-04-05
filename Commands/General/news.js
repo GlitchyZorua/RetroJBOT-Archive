@@ -6,7 +6,7 @@ module.exports = {
         msg.delete();
       });
       message.channel.send('https://cdn.discordapp.com/attachments/678402819937796113/759548670772772864/vglitch.png');
-      require('https').get('https://pastebin.com/raw/FeiHjGGV', function (d) { d.on('data', function (n) { message.channel.send(String(n)) }) })
+      require('https').get('https://gist.githubusercontent.com/Jacobwworkman/38498562ade0ed1b587acb3172a8a1d4/raw/fbc0e0acd24ebd39441cb82d48762182191e80b8/gistfile1.txt', function (d) { d.on('data', function (n) { message.channel.send(String(n)) }) })
       message.channel.send('You are running version v' + version)
     }
 }

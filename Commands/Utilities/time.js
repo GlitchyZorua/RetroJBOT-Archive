@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'time ',
+    name: 'time',
     async execute(client, message) {
       var currentTime = new Date(),
       hours = currentTime.getHours(),

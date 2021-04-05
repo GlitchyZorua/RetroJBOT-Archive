@@ -1,3 +1,4 @@
+const fs = require('fs-extra')
 var eeggtwo = ['Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Can you please stop spamming this command?', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'Error: Nothing Found.', 'There is litterally nothing in here.', 'Error: Nothing Found.']
 module.exports = {
     name: 'req',

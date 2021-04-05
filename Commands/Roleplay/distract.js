@@ -6,13 +6,14 @@ String.prototype.rpremovepings = function() {
       .replace("Nigger", "no")
 };
 module.exports = {
-    name: 'snuggle',
+    name: 'distract',
     async execute(client, message) {
       let thingtosend = message.content.slice(10).rpremovepings()
-      if (thingtosend == ""){
-        message.channel.send(":x: Syntax error! Synax: j.snuggle <text>")
-          return
-        }
-      message.channel.send("*" + message.author.tag + " snuggles" + thingtosend + "! OwO*");
+if (thingtosend == ""){
+message.channel.send(":x: Syntax error! Synax: j.distract <text>")
+  return
+}
+      message.channel.send("" + thingtosend+ " has been distracted!");
+      message.channel.send("https://media.giphy.com/media/eGO2auvt1ktByeEvEe/giphy.gif");
     }
 }

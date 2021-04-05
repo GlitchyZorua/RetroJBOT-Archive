@@ -1,6 +1,8 @@
 module.exports = {
     name: 'sas',
     async execute(client, message, args) {
+    message.channel.send(":x: Sas can't be used at this time")
+    return
       if (!adminlist.admins.includes(message.author.id)) {
         message.channel.send(':x: `Bot admin only.`');
         return

@@ -1,5 +1,14 @@
+String.prototype.removepings = function() {
+  return this
+      .replace(/(@(?:everyone|here))/gi, 'no') //@everyone/here ping
+      .replace(/<@&(\d+)>/gi, "no") //role ping
+      .replace(/<@!?(\d+)>/gi, "no") //user ping
+      .replace("nigger", "no")
+      .replace("Nigger", "no")
+};
+const Discord = require('discord.js')
 module.exports = {
-    name: 'purgecia',
+    name: 'purgecus',
     async execute(client, message) {
       if (message.channel instanceof Discord.DMChannel) { //do not execute
         message.channel.send(':bomb: :no_entry_sign: You cannot use this command in dms. **The cia has blocked this command from dms.**');

@@ -1,7 +1,14 @@
+const talkedRecently = new Set();
+const Discord = require("discord.js");
+const fs = require("fs-extra");
+var adminlist = fs.readJSONSync('./admins.txt')
+var ssbans = fs.readJSONSync('C:\\Users\\Jacob Workman\\Desktop\\RetroJBOT-main\\ssbans.txt')
 module.exports = {
     name: 'ss',
     async execute(client, message, args) {
-        if (talkedRecently.has(message.author.id)) {
+message.channel.send(":x: You cannot use Serversend because this version of RetroJBOT doesn't support sas yet. SAS needs to be rewritten due to the whole retrojbot code being rewritten. We aplogize for any inconvenience.")
+return
+      if (talkedRecently.has(message.author.id)) {
             message.channel.send(":alarm_clock: **Cooldown** You can only send one message per minute, Please slowdown. *tick tock* ");
       } else {
       

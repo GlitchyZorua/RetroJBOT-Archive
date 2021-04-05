@@ -1,4 +1,4 @@
-
+var coin = ['Heads', 'Tails']
 module.exports = {
     name: 'coinflip',
     async execute(client, message) {

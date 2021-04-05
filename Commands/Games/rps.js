@@ -1,7 +1,7 @@
-var rps = ['rock','paper','sissors']
+const Discord = require("discord.js");
 module.exports = {
     name: 'rps',
-    async execute(client, message, args) {
+    async execute(client, message) {
       let a = (r) => { return Math.floor(Math.random() * r.length) };
       let b = (r) => { return r.replace('rock',':rock:').replace('paper',':pencil:').replace('scissors',':scissors:'); };
       let c = (r, h) => { if(r == 'rock' && h == 'scissors' || r == 'paper' && h == 'rock' || r == 'scissors' && h == 'paper'){ return 'You lost!'; }else if(h == 'rock' && r == 'scissors' || h == 'paper' && r == 'rock' || h == 'scissors' && r == 'paper'){ return 'You won!'; }else if(h == 'rock' && r == 'rock' || h == 'paper' && r == 'paper' || h == 'scissors' && r == 'scissors'){ return 'Tie!'; }else{ return 'Unknown choice' }; };

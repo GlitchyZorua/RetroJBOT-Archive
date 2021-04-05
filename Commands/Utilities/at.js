@@ -1,5 +1,8 @@
+var thisDate;
+thisDate = new Date();
+const Discord = require('discord.js')
 module.exports = {
-    name: 'date',
+    name: 'at',
     async execute(client, message) {
         var currentTime = new Date(),
         hours = currentTime.getHours(),

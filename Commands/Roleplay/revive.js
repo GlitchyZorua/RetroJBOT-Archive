@@ -6,13 +6,13 @@ String.prototype.rpremovepings = function() {
       .replace("Nigger", "no")
 };
 module.exports = {
-    name: 'snuggle',
+    name: 'revive',
     async execute(client, message) {
-      let thingtosend = message.content.slice(10).rpremovepings()
+      let thingtosend = message.content.slice(6).rpremovepings()
       if (thingtosend == ""){
-        message.channel.send(":x: Syntax error! Synax: j.snuggle <text>")
+        message.channel.send(":x: Syntax error! Synax: j.revive <text>")
           return
         }
-      message.channel.send("*" + message.author.tag + " snuggles" + thingtosend + "! OwO*");
+      message.channel.send("*" + message.author.tag + " revives" + thingtosend + "!*");
     }
 }

@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 module.exports = {
     name: '42',
     async execute(client, message, args) {

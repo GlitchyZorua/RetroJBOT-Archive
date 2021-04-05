@@ -1,3 +1,5 @@
+const fs = require('fs-extra')
+var adminlist = fs.readJSONSync('./admins.txt')
 module.exports = {
     name: 'changestatus',
     async execute(client, message, args) {

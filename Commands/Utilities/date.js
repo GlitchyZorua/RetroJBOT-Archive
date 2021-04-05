@@ -1,3 +1,5 @@
+var thisDate;
+thisDate = new Date();
 module.exports = {
     name: 'date',
     async execute(client, message) {

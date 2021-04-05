@@ -1,3 +1,6 @@
+const WolframAlphaAPI = require('wolfram-alpha-api');
+const waApi = WolframAlphaAPI('G3UG26-V9K9QVY5JA');
+const Discord = require('discord.js')
 module.exports = {
     name: 'pokemon',
     async execute(client, message, args) {

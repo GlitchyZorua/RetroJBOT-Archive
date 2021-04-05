@@ -1,5 +1,4 @@
-
-
+const superagent = require('superagent');
 module.exports = {
     name: 'fortune',
     async execute(client, message, args) {

@@ -1,5 +1,5 @@
 module.exports = {
-    name: '42',
+    name: 'assistant',
     async execute(client, message, args) {
 // The brain
 let thingtosend = message.content.slice(12).removepings()

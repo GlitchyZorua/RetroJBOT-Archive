@@ -1,3 +1,4 @@
+var coina = ['heads', 'tails']
 module.exports = {
     name: 'cp0',
     async execute(client, message, args) {

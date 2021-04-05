@@ -1,3 +1,4 @@
+const Discord = require('discord.js')
 module.exports = {
     name: 'play',
     async execute(client, message, args) {
