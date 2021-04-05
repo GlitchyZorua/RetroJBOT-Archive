@@ -18,9 +18,17 @@
   "homepage": "https://github.com/Jacobwworkman/RetroJBOT#readme",
   "dependencies": {
     "chalk": "^4.1.0",
+    "ddg": "0.0.3",
+    "ddg-scraper": "^1.0.2",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "fs-extra": "^9.1.0",
+    "path": "^0.12.7",
+    "progress": "^2.0.3",
+    "random-animals-api": "^1.2.1",
+    "superagent": "^6.1.0",
+    "util": "^0.12.3",
+    "wolfram-alpha-api": "http://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz"
   }
 }
