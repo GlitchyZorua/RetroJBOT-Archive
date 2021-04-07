@@ -2,6 +2,10 @@ module.exports = {
     name: 'itc',
     async execute(client, message) {
         imp = message.content.slice(6)
+        if (imp === ""){
+          message.channel.send(":x: Syntax Error! Syntax: j.itc <text>")
+          return
+        }
     if (imp.includes('\'')) {
       bothU = imp.split('\'')
       feet = bothU[0]

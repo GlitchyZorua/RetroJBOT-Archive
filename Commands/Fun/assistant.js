@@ -1,8 +1,22 @@
+String.prototype.removepings = function() {
+  return this
+      .replace(/(@(?:everyone|here))/gi, 'no') //@everyone/here ping
+      .replace(/<@&(\d+)>/gi, "no") //role ping
+      .replace(/<@!?(\d+)>/gi, "no") //user ping
+      .replace("nigger", "no")
+      .replace("Nigger", "no")
+};
 module.exports = {
     name: 'assistant',
     async execute(client, message, args) {
+message.channel.send(":x: This command has been disabled because it can be used to doxx my creator. The command will be rewrited with a tor proxy soon:tm:")
+return
 // The brain
 let thingtosend = message.content.slice(12).removepings()
+if (thingtosend === ""){
+message.channel.send(":x: Syntax Error! Syntax: j.assistant <question>")
+return
+}
 const unixTime = Math.floor(Date.now() / 1000);
     var currentTime = new Date(),
     hours = currentTime.getHours(),

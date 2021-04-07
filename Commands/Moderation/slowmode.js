@@ -11,6 +11,10 @@ module.exports = {
     name: 'slowmode',
     async execute(client, message) {
       let thingtosend = message.content.slice(11).removepings()
+      if (thingtosend === ""){
+        message.channel.send(":x: Syntax Error! Syntax: j.slowmode (<#|off>)")
+      return;
+      }
       if (thingtosend.toLowerCase() == "jacobw") {
         message.channel.send('Heyyy ;)');
         return;

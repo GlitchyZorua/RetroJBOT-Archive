@@ -19,6 +19,10 @@ module.exports = {
           return
         }
         
+        if (message.content.slice(5) === "") {
+          message.channel.send(":x: Syntax Error! Syntax: j.ban <@> [reason]")
+          return;
+        }
   
         //    if (permArray.indexOf(true) == -1) {
         //      message.reply('Your permissions forbid you to ban someone.');

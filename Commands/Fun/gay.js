@@ -2,6 +2,10 @@ module.exports = {
     name: 'gay',
     async execute(client, message, args) {
         let thingtosend = message.content.slice(6).rpremovepings()
+        if (thingtosend === ""){
+          message.channel.send(":x: Syntax Error! Syntax: j.gay <text>")
+          return
+        }
         var gay = Math.floor(Math.random() * 100);
         if (thingtosend.toLowerCase() == "devil") {
           message.channel.send("**:smiling_imp: Devil** is 666% gay")

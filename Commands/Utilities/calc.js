@@ -106,6 +106,10 @@ var nanieegg = ['NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', '
 module.exports = {
     name: 'calc',
     async execute(client, message) {
+if (message.content.slice(7) === ""){
+message.channel.send(":x: Syntax Error! Syntax: j.calc <text>")
+return;
+}
       message.content = message.content.slice(7)
     var nanieeggyes = nanieegg[Math.floor(Math.random() * nanieegg.length)]
     if (!message.content) return message.channel.send("🖩 " + nanieeggyes)

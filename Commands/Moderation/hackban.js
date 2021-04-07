@@ -20,6 +20,9 @@ module.exports = {
         return
       }
       let args = message.content.slice(9).split(" ")
+      if (args === ""){
+        message.channel.send(":x: Syntax Error! Syntax: j.hackban <@> [reason]")
+      }
       args.shift();
       let reasonb = args.join(" ");
              const giflol = new Discord.MessageEmbed()
