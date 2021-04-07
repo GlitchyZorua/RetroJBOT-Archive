@@ -1,5 +1,5 @@
 
-var version = "13.0.0 RetroJBOT Orange Edition Again...";
+var version = "13.0.1 RetroJBOT Orange Edition Again...";
 console.log("########  ######## ######## ########   #######        ## ########   #######  ########")
 console.log("##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## ")
 console.log("##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## ")
@@ -9,7 +9,7 @@ console.log('##     ## ########    ##    ##     ##  #######   ######  ########  
 console.log('                            ╭─────────────────────────────╮')
 console.log('                            │ Connecting to discord.js... │')
 console.log('                            ╰─────────────────────────────╯')
-console.log('                    v'+version)
+console.log('                    v'+process.env.version)
 const Discord = require('discord.js')
 const fs = require('fs-extra')
 const path = require('path')
