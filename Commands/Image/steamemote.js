@@ -4,7 +4,7 @@ module.exports = {
         var thingtosend = message.content.slice(13)
         var idkwattocallthislol = require('https').get('https://steamcommunity-a.akamaihd.net/economy/emoticon/'+encodeURIComponent(thingtosend))
         if (thingtosend === "") {
-          message.channel.send(":octagonal_sign: Specify a name of a steam emote, Please.")
+          message.channel.send(":octagonal_sign: Specify a name of a steam emote, Please.\nSyntax: j.steamemote <text>")
           return;
         }
         if (idkwattocallthislol === "") {

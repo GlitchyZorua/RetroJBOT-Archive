@@ -1,8 +1,11 @@
-
+const talkedRecently = new Set();
 
 module.exports = {
     name: 'slots',
     async execute(client, message, args) {
+      if (talkedRecently.has(message.author.id)) {
+         message.channel.send(":alarm_clock: **Cooldown** You can only use the slots per minute, Please slowdown. *tick tock* ");
+   } else {
       let a = (r) => { return Math.floor(Math.random() * r.length) };
       let b = (r) => { return r.replace(/\[1]/g,':strawberry:').replace(/\[2]/g,':pineapple:').replace(/\[3]/g,':slot_machine:').replace(/\[4]/g,':seven:'); };
       let c = ['1','2'][a(['1','2'])];
@@ -32,4 +35,5 @@ module.exports = {
       }
     return
     }
+   }
 }
