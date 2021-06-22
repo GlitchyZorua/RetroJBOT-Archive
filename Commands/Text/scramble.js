@@ -6,15 +6,19 @@ String.prototype.removepings = function() {
       .replace("nigger", "no")
       .replace("Nigger", "no")
 };
+function shuffle(string) {
+  let array = string.replace(/  /gi, ' ').split('')
+  array.sort(() => Math.random() - 0.5);
+  return array.join("")
+}
 module.exports = {
     name: 'scramble',
     async execute(client, message) {
-      let thingtosend = message.content.slice(12).removepings()
+      let thingtosend = message.content.slice(8).removepings()
       if (thingtosend == ""){
-        message.channel.send(":x: Syntax error! Synax: j.figlet <text>")
+        message.channel.send(":x: Syntax error! Syntax: j.scramble <text>")
           return
         }
-      message.channel.send(thingtosend.toLowerCase())
-      console.log("[MSG]" + thingtosend.toLowerCase())
+      message.channel.send(shuffle(thingtosend))
     }
 }

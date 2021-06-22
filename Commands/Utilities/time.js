@@ -1,8 +1,11 @@
+var thisDate;
+thisDate = new Date();
 module.exports = {
     name: 'time',
     async execute(client, message) {
       var currentTime = new Date(),
       hours = currentTime.getHours(),
+      seconds = currentTime.getSeconds(),
       minutes = currentTime.getMinutes();
     
     
@@ -14,7 +17,6 @@ module.exports = {
     if (hours == 0) {
     hours = 12;
     }
-      seconds = thisDate.getSeconds()
      // if (timehours == 0) { timehours = 12 }
      // timehours = timehours.toString().length > 1 ? timehours : '0' + timehours
      // timeminutes = timeminutes.toString().length > 1 ? timeminutes : '0' + timeminutes

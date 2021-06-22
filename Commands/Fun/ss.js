@@ -27,7 +27,7 @@ module.exports = {
             const yes = new Discord.MessageEmbed()
             .setColor('#FF0000')
             .setTitle(':no_entry: You have been banned from using serversend.')
-            .setDescription("You have been banned from using serversend. To submit an appeal, please do j.feedback.\nIf you need a reason, We can slide the reason in your dms")
+            .setDescription("You have been banned from using serversend. To appeal, please visit https://forms.gle/njmHVkYrFgCUckWbA.")
             .setThumbnail('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Stop_x_nuvola.svg/240px-Stop_x_nuvola.svg.png')
             message.channel.send(yes)
             return;

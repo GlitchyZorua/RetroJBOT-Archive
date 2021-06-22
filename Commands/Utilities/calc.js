@@ -47,6 +47,7 @@ function calc(s) {
         if (s[i] == '÷') {
           return calc(s.slice(0, i)) / calc(s.slice(i + 1));
         }
+
       }
     }
   }
