@@ -1,5 +1,5 @@
-
-var version = "13.0.1 RetroJBOT Orange Edition Again...";
+require('dotenv').config()
+var version = "13.1.10 RetroJBOT Orange Edition Again...";
 console.log("########  ######## ######## ########   #######        ## ########   #######  ########")
 console.log("##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## ")
 console.log("##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## ")
@@ -14,15 +14,14 @@ const Discord = require('discord.js')
 const fs = require('fs-extra')
 const path = require('path')
 const chalk = require('chalk')
-var services_stopped = 0;
+let services_stopped = 0;
 var counter = 0;
 var adminlist = fs.readJSONSync('./admins.txt')
 var ssbans = fs.readJSONSync('ssbans.txt')
 //const animals = require('random-animals-api');
 var ProgressBar = require('progress');
-var bar = new ProgressBar(':bar :current/:total', { total: 101 });
+var bar = new ProgressBar(':bar :current/:total', { total: 103 });
 const superagent = require('superagent');
-
 String.prototype.removepings = function() {
     return this
         .replace(/(@(?:everyone|here))/gi, 'no') //@everyone/here ping
@@ -60,7 +59,6 @@ String.prototype.aremovepingsh = function() {
 
 
 const client = new Discord.Client()
-require('dotenv').config()
 client.login(process.env.TOKEN)
 client.commands = new Discord.Collection()
 
@@ -120,4 +118,3 @@ fs.readdir('./Events', (err, files) => {
     })
    // console.log(chalk.blueBright(`╰────────────────────┴──╯`))
 })
-
