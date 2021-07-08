@@ -12,6 +12,7 @@ module.exports = {
     async execute(client, message, args) {
 //message.channel.send(":x: This command has been disabled because it can be used to doxx my creator. The command will be rewrited with a tor proxy soon:tm:")
 //return
+message.channel.send('<a:Loading_Color:759914061696860202> *loading...*').then(msg => {
 let thingtosend = message.content.slice(9).removepings()
 if (thingtosend === ""){
 message.channel.send(":x: Syntax Error! Syntax: j.wolfram <question>")
@@ -19,7 +20,7 @@ return
 }
 tr.request('https://api.wolframalpha.com/v1/result?i='+encodeURIComponent(thingtosend)+'&appid=G3UG26-V9K9QVY5JA', function (err, res, body) {
   if (err){
-    message.channel.send(":x: `No answer found`")
+    message.channel.send(":x: An error occurred. ")
     return
   }
   if (!err && res.statusCode == 200) {
@@ -27,6 +28,9 @@ tr.request('https://api.wolframalpha.com/v1/result?i='+encodeURIComponent(thingt
     return
     }
     message.channel.send(":x: `No answer found`")
+    return
+    });
+    msg.delete();
 });
 return;
 }
