@@ -1,9 +1,11 @@
 const weather = require('weather-js');
 const Discord = require('discord.js');
+var loading = ["Alright hold on, I need to go outside","Loading...",'Please wait...',"Ok, hold on.","jacob was here...","Alright, I hope i don't die from natural disaster."]
 module.exports = {
     name: 'weather',
     async execute(client, message) {
       var args = message.content.slice(9)
+      message.channel.send('<a:Loading_Color:759914061696860202> '+loading[Math.floor(Math.random() * loading.length)]).then(msg => {
       weather.find({search: args, degreeType: 'F'}, function (error, result){
         // 'C' can be changed to 'F' for farneheit results
         if (Math.floor(Math.random() * 100) == Math.floor(Math.random() * 100)){
@@ -20,7 +22,7 @@ module.exports = {
         image = "https://i.imgur.com/HsJJFEG.png"
         }//https://cdn.discordapp.com/attachments/676219827282509843/862500228820500500/vglitch.png
         /*/
-        
+        //.addField(':test_tube: Degree Type', '°F and °C (using j.ftc, might not be accurate)', true)
         var current = result[0].current;
         var location = result[0].location;
         var fah = Number(current.temperature)
@@ -40,6 +42,8 @@ module.exports = {
         .addField('Humidity', `${current.humidity}%`, true)
         message.channel.send(weatherinfo)
         })
+        msg.delete();
       return
-    }
+  });
+}
 }
