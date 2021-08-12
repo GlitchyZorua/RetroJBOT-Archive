@@ -6,10 +6,10 @@ module.exports = {
         message.channel.send(':no_entry_sign: You cannot use this command in dms.');
         return;
       }
-      if (!member.hasPermission('MANAGE_WEBHOOKS')) {
-      message.channel.send(":x: You must have `MANAGE_WEBHOOKS` to perform this action")
-      return
-      }
+      if (!message.member.hasPermission('MANAGE_WEBHOOKS')) {
+        message.channel.send(":x: You must have `MANAGE_WEBHOOKS` to perform this action")
+        return
+        }
       message.channel.send('<a:Loading_Color:759914061696860202>').then(msg => {
         message.channel.createWebhook('Windows XP', { avatar: 'https://cdn.discordapp.com/avatars/757068117846523954/4881f167d7db8fc35b20f8cd3b014613.png?size=1024' }).then(webhook => {
           console.log('[MSG] <a:Loading_Color:759914061696860202>');

@@ -8,11 +8,11 @@ String.prototype.rpremovepings = function() {
 module.exports = {
     name: 'microwave',
     async execute(client, message) {
+      let thingtosend = message.content.slice(11).rpremovepings()
       if (thingtosend == ""){
         message.channel.send(":x: Syntax error! Synax: j.microwave <text>")
           return
         }
-      let thingtosend = message.content.slice(11).rpremovepings()
-      message.channel.send("*" + message.author.tag + " throws " + thingtosend + " in the microwave!*");
+      message.channel.send("*" + message.author.tag + " throws" + thingtosend + " in the microwave!*");
     }
 }

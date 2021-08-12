@@ -6,7 +6,7 @@ module.exports = {
         message.channel.send(':no_entry_sign: You cannot use this command in dms.');
         return;
       }
-      if (!member.hasPermission('MANAGE_WEBHOOKS')) {
+      if (!message.member.hasPermission('MANAGE_WEBHOOKS')) {
       message.channel.send(":x: You must have `MANAGE_WEBHOOKS` to perform this action")
       return
       }
