@@ -13,6 +13,7 @@ if %ERRORLEVEL% == 3 settings
 
 :a
 echo Enable Loop Mode Or halt when crash?
+
 cmdMenuSel f870 "1. loop mode (recommended)" "2. Halt when crash" "3. Cancel"
 if %ERRORLEVEL% == 1 goto c
 if %ERRORLEVEL% == 2 goto b
@@ -20,6 +21,7 @@ if %ERRORLEVEL% == 3 goto d
 
 :b
 echo Running Node...
+start C:\Users\Jacob Workman\Desktop\RetroJBOT-main\Bot Files\Files\TorBrowser\Tor\tor.exe
 node index.js --unhandled-rejections=strict
 cmdMenuSel f870 "1. Restart" "2. Exit" "3. Settings"
 if %ERRORLEVEL% == 1 goto a

@@ -23,7 +23,7 @@
     "discord-buttons": "^2.4.1",
     "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
-    "fs": "0.0.1-security",
+    "fs": "^0.0.1-security",
     "fs-extra": "^9.1.0",
     "jimp": "^0.16.1",
     "metaweather": "0.0.2",
@@ -35,6 +35,8 @@
     "tor-request": "^3.1.0",
     "util": "^0.12.3",
     "weather-js": "^2.0.0",
-    "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz"
+    "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz",
+    "yahoo-finance": "^0.3.7",
+    "yahoo-stock-prices": "^1.1.0"
   }
 }

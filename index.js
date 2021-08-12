@@ -1,5 +1,4 @@
 require('dotenv').config()
-var version = "13.1.10 RetroJBOT Orange Edition Again...";
 console.log("########  ######## ######## ########   #######        ## ########   #######  ########")
 console.log("##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## ")
 console.log("##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## ")
