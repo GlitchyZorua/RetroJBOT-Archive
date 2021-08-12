@@ -1,22 +1,29 @@
 const chalk = require('chalk')
 const Discord = require('discord.js')
-require('dotenv').config()
-
+const fs = require('fs-extra')
+var botbans = fs.readJSONSync('./botbans.txt')
+var disableddms = 0
 module.exports = (client, message) => {
     if (message.author.bot) return
     if (message.channel.type === 'dm') {
-        
-    } else {
+    if (disableddms === 1){
+        message.channel.send(":no_entry: DMS has been disabled.");
+        return
+    }
+    }
         var prefix = process.env.Prefix
         var escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         var prefixRegex = new RegExp(`^(<@!?${client.user.id}> |<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`)
         if (!prefixRegex.test(message.content)) return
         var [, matchedPrefix] = message.content.match(prefixRegex)
-    
                 //console.log(matchedPrefix.length)
     
         console.log(chalk.yellow(`(${message.author.id} || ${message.author.tag}) Checking client to see if command`))
-            
+        if (botbans.bans.includes(message.author.id)) {
+            console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: User account id banned`))
+            message.channel.send(":no_entry: This account has been blocked from RetroJBOT.\n\nTo appeal, please visit https://forms.gle/njmHVkYrFgCUckWbA. Any ALT accounts will be punished.")
+            return;
+        }
         var cmdCall = message.content.slice(matchedPrefix.length).split(' ').shift().toLowerCase()
         var command = client.commands.get(cmdCall) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(cmdCall))
         var args = message.content.split(' ')
@@ -34,10 +41,10 @@ module.exports = (client, message) => {
                 console.log(e)
                 message.channel.send(new Discord.MessageEmbed()
                     .setColor('RED')
-                    .setDescription('I am broken, My Dev Team has been notified of this issue')
-                    .setTitle('Error')
+                    .setDescription('The bot has detected something REALLY wrong with the bots files. Please contact my creator: Jacobw#8117')
+                    .setTitle('Critical Error')
                 )
+        
             }
         }
     }
-}
