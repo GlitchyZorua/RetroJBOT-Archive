@@ -6,7 +6,7 @@ module.exports = {
     name: 'eval',
     async execute(client, message, args) {
     if (!adminlist.admins.includes(message.author.id)) {
-      message.channel.send(':x: *You told the bot to do something, the bot refused, It seems like you need `BOT_ADMIN` to use this command.*');
+      message.channel.send(':x: Bot Admin Only.');
       return
       } else {
       try {
@@ -16,8 +16,8 @@ module.exports = {
       }
       catch (error) {
         console.error(error);
-        message.channel.send(':x: ***Oops! An error occurred!***\n' + eegg[Math.floor(Math.random() * eegg.length)] + "\n```js" + "\n" + inspect(error) + "```");
-            }
+        message.channel.send(':x: ***An error occurred during evalation***\n' + eegg[Math.floor(Math.random() * eegg.length)] + "\n```js" + "\n" + inspect(error) + "```");
+      }
     }
   }
 }
