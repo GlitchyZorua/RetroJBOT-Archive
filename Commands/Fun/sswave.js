@@ -4,25 +4,22 @@ const Discord = require("discord.js");
 const fs = require("fs-extra");
 var adminlist = fs.readJSONSync('./admins.txt')
 var ssbans = fs.readJSONSync('C:\\Users\\Jacob Workman\\Desktop\\RetroJBOT-main\\ssbans.txt')
-
+var waves = process.env.wave
 module.exports = {
-    name: 'ss',
+    name: 'sswave',
     async execute(client, message, args, services_stopped) {
+      let thingtosend = message.content.slice(5).removepings()
 //message.channel.send(":x: You cannot use Serversend because this version of RetroJBOT doesn't support sas yet. SAS needs to be rewritten due to the whole retrojbot code being rewritten. We aplogize for any inconvenience.")
 //return
       if (talkedRecently.has(message.author.id)) {
-            message.channel.send(":alarm_clock: **Cooldown** You can only send one message per minute, Please slowdown. *tick tock* "); 
+            message.channel.send(":alarm_clock: **Cooldown** You can only send one wave message per hour, Please slowdown. *tick tock*"); 
       } else {
       if (services_stopped === 1) {
         message.channel.send(":x: Server Send has shutdown for now... Please come again.")
         return;
       }
       if (message.channel.nsfw) {//message.channel.send(":x: Server Send has shutdown for 5 days. Please come again. `Reason: Example`")
-        message.channel.send("🔞 Sorry, this command is not allowed in NSFW channels. **Bypassing this restrictions will be a ban without any warning.**")
-          return;
-      }
-      if (thingtosend === "") {//message.channel.send(":x: Server Send has shutdown for 5 days. Please come again. `Reason: Example`")
-        message.channel.send(":warning: Syntax Error! Syntax: j.ss <text>")
+        message.channel.send("🔞 A wave can't be sent in a nsfw channel.")
           return;
       }
           if (ssbans.bans.includes(message.author.id)) {
@@ -34,18 +31,16 @@ module.exports = {
             message.channel.send(yes)
             return;
           }
-          let thingtosend = message.content.slice(5).removepings()
           const no = new Discord.MessageEmbed()
           .setColor('RANDOM')
           .setTitle(message.author.tag + " (id: " + message.author.id+")")
-          .setDescription(thingtosend)
-          .setThumbnail(message.author.avatarURL())
-          //let len = message.content.split(' ')[0].length ==  12 ? 12 : 5 //jacob u suck
+          .setDescription(message.author.tag + ' sent a wave! Hello on the other side!\n\n\nTotal Waves: '+waves)
+          .setThumbnail('https://media.discordapp.net/attachments/676219827282509843/875554282173243412/resize.png')
           client.channels.cache.get('617865643307434025').send(no)
-          var tipzero = [""," You can join my server with j.invite"]
-          message.channel.send(':white_check_mark: Sent to my server!'+tipzero[Math.floor(Math.random() * tipzero.length)])
-          console.log(message.author.tag + ": " + message.content.slice(5));
-        //  ssnum++;
+          message.channel.send(':white_check_mark: Sent a wave! Hello on the other side!')
+          ++waves 
+          process.env.wave = waves;
+          
           talkedRecently.add(message.author.tag)
           setTimeout(() => {
             // Removes the user from the set after a minute
