@@ -8,20 +8,21 @@ var waves = process.env.wave
 module.exports = {
     name: 'sswave',
     async execute(client, message, args, services_stopped) {
-      let thingtosend = message.content.slice(5).removepings()
 //message.channel.send(":x: You cannot use Serversend because this version of RetroJBOT doesn't support sas yet. SAS needs to be rewritten due to the whole retrojbot code being rewritten. We aplogize for any inconvenience.")
-//return
-      if (talkedRecently.has(message.author.id)) {
+//retur
+var waves = process.env.wave
+      if (talkedRecently.has(message.author.tag)) {
             message.channel.send(":alarm_clock: **Cooldown** You can only send one wave message per hour, Please slowdown. *tick tock*"); 
-      } else {
-      if (services_stopped === 1) {
-        message.channel.send(":x: Server Send has shutdown for now... Please come again.")
-        return;
       }
-      if (message.channel.nsfw) {//message.channel.send(":x: Server Send has shutdown for 5 days. Please come again. `Reason: Example`")
+      if (message.channel.nsfw == true) {//message.channel.send(":x: Server Send has shutdown for 5 days. Please come again. `Reason: Example`")
         message.channel.send("🔞 A wave can't be sent in a nsfw channel.")
           return;
       }
+      talkedRecently.add(message.author.tag)
+      setTimeout(() => { // 3600000
+        // Removes the user from the set after a minute
+        talkedRecently.delete(message.author.tag);
+      }, 3600000);
           if (ssbans.bans.includes(message.author.id)) {
             const yes = new Discord.MessageEmbed()
             .setColor('#FF0000')
@@ -40,12 +41,5 @@ module.exports = {
           message.channel.send(':white_check_mark: Sent a wave! Hello on the other side!')
           ++waves 
           process.env.wave = waves;
-          
-          talkedRecently.add(message.author.tag)
-          setTimeout(() => {
-            // Removes the user from the set after a minute
-            talkedRecently.delete(message.author.id);
-          }, 60000);
         }
-    }
-}
+       }
