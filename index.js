@@ -20,6 +20,7 @@ var ssbans = fs.readJSONSync('ssbans.txt')
 //const animals = require('random-animals-api');
 var ProgressBar = require('progress');
 var bar = new ProgressBar(':bar :current/:total', { total: 103 });
+const waves = 0
 const superagent = require('superagent');
 String.prototype.removepings = function() {
     return this
