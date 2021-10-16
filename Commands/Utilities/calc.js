@@ -112,13 +112,13 @@ function calc(s) {
 
 
 //var nanieegg = ['NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaNi?','NaN','NaN','NaN','Omae wa moe shindu. NaNi?','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN']
-const { inspect } = require('util');
 module.exports = {
     name: 'calc',
     async execute(client, message) {
       // http://xahlee.info/comp/unicode_circled_numbers.html
       String.prototype.filters = function() {
         return this
+            //                                                                Symbols and emojis
             .replace('π', 'pi')
             .replace('Π', "pi")
             .replace('П', 'pi')
@@ -127,14 +127,12 @@ module.exports = {
             .replace("x", "*")
             .replace(":infinity:", "Infinity")
             .replace("∞", "Infinity")
-            //.replace("rotate 8", "Infinity")
-            //.replace("rotate 6", 9)
-            //.replace("rotate 9", 6)
             .replace(":heavy_multiplication_x:",  "*")
             .replace(":heavy_division_sign:", "/")
             .replace(":heavy_plus_sign:", '+')
             .replace(":heavy_minus_sign:", '-')
-            .replace("the loneliest number", 1)
+            //                                                                        Phrases
+            .replace("the loneliest number", 1) // When putting numbers, javascript allows you to put them in without quotation marks, which makes things alot easier.
             .replace("how many horns does a unicorn have", 1)
             .replace("the answer to the ultimate question of life the universe and everything", 42)
             .replace("the answer to life the universe and everything", 42)
@@ -144,6 +142,11 @@ module.exports = {
             .replace("funny number", 69)
             .replace("weed number", 420)
             .replace("leet number", 1337)
+            //.replace("rotate 8", "Infinity")
+            //.replace("rotate 6", 9)
+            //.replace("rotate 9", 6)
+            //                                                                  Fancy text.
+            //                                                              Circled Digit Symbol
             .replace("⓪", 0)
             .replace("①", 1)
             .replace("②", 2)
@@ -157,8 +160,89 @@ module.exports = {
             .replace("⑩", 10)
             .replace("⑪", 11)
             .replace("⑫", 12)
-      };
-      var arg = message.content.slice(7).filters()
+            .replace("⑬", 13)
+            .replace("⑭", 14)
+            .replace("⑮", 15)
+            .replace("⑯", 16)
+            .replace("⑰", 17)
+            .replace("⑱", 18)
+            .replace("⑲", 19)
+            .replace("⑳", 20)
+            .replace("㉑", 21)
+            .replace("㉒", 22)
+            .replace("㉓", 23)
+            .replace("㉔", 24)
+            .replace("㉕", 25)
+            .replace("㉖", 26)
+            .replace("㉗", 27)
+            .replace("㉘", 28)
+            .replace("㉙", 29)
+            .replace("㉚", 30)
+            .replace("㉛", 31)
+            .replace("㉜", 32)
+            .replace("㉝", 33)
+            .replace("㉞", 34)
+            .replace("㉟", 35)
+            .replace("㊱", 36)
+            .replace("㊲", 37)
+            .replace("㊳", 38)
+            .replace("㊴", 39)
+            .replace("㊵", 40)
+            .replace("㊶", 41)
+            .replace("㊷", 42)
+            .replace("㊸", 43)
+            .replace("㊹", 44)
+            .replace("㊺", 45)
+            .replace("㊻" ,46)
+            .replace("㊼", 47)
+            .replace("㊽", 48)
+            .replace("㊾", 49)
+            .replace("㊿", 50)
+            // Phew, thats whole lot. Now we can do the other things
+            //                                                           Circled Digit Symbol - 2
+            .replace("⓵", 1)
+            .replace("⓶", 2)
+            .replace("⓷", 3)
+            .replace("⓸", 4)
+            .replace("⓹" ,5)
+            .replace("⓺", 6)
+            .replace('⓻', 7)
+            .replace("⓼", 8)
+            .replace("⓽", 9)
+            .replace("⓾", 10)
+            //                                      Negative Circled Digit Number Symbol / Black Circle Number      
+            .replace('⓿', 0)
+            .replace('❶', 1)    
+            .replace('❷', 2)
+            .replace('❸', 3)
+            .replace('❹', 4)
+            .replace("❺", 5)
+            .replace("❻", 6)
+            .replace("❼", 7)
+            .replace("❽", 8)
+            .replace('❾', 9)
+            .replace('❿', 10)
+            .replace('⓫', 11)
+            .replace('⓬', 12)
+            .replace('⓭', 13)
+            .replace('⓮', 14)
+            .replace('⓯', 15)
+            .replace('⓰', 16)
+            .replace('⓱', 17)
+            .replace('⓲', 18)
+            .replace('⓳', 19) 
+            .replace('⓴', 20) // I need a break from all of this coding. Damn, Fancy text is taking a pretty long time to add all of this.
+            // Link to the Symbols here so I can remember it: https://www.copyandpastesymbols.net/number-symbols.html
+          };
+          String.prototype.removepings = function() {
+            return this
+                .replace(/<@&(\d+)>/gi, "no")
+                .replace(/(@(?:everyone|here))/gi, 'no')
+                .replace(/<@&(\d+)>/gi, "no")
+                .replace("nigger", "no")
+                .replace("Nigger", "no")
+          };
+          var arg = message.content.slice(7).filters().removepings()
     if (arg === ""){
     message.channel.send(":x: Syntax Error! Syntax: j.calc <text>")
     return;

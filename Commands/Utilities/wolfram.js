@@ -10,6 +10,8 @@ String.prototype.removepings = function() {
 module.exports = {
     name: 'wolfram',
     async execute(client, message, args) {
+    message.channel.send(':x: Command has been disabled')
+    return
 //message.channel.send(":x: This command has been disabled because it can be used to doxx my creator. The command will be rewrited with a tor proxy soon:tm:")
 //return
 message.channel.send('<a:Loading_Color:759914061696860202> *loading...*').then(msg => {

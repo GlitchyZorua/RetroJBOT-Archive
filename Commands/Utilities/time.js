@@ -1,8 +1,46 @@
-var thisDate;
-thisDate = new Date();
 module.exports = {
     name: 'time',
     async execute(client, message) {
+      var thisDate;
+thisDate = new Date();
+switch (new Date().getHours()) {
+  case 11:
+    clock = "🕛";
+    break;
+  case 10:
+    clock = "🕚";
+    break;
+  case 9:
+   clock = "🕙";
+    break;
+  case 8:
+    clock = "🕘";
+    break;
+  case 7:
+    clock = "🕗";
+    break;
+  case 6:
+    clock = "🕖";
+    break;
+  case 5:
+    clock = "🕕";
+    break;
+  case 4:
+    clock = "🕔";
+    break
+  case 3:
+    clock = "🕓";
+    break;
+  case 2:
+   clock = "🕒";
+  break;
+  case 1:
+    clock = "🕑";
+   break;
+   case 0:
+    clock = "🕐";
+   break;
+} // First time using switches, I am proud
       var currentTime = new Date(),
       hours = currentTime.getHours(),
       seconds = currentTime.getSeconds(),
@@ -21,7 +59,7 @@ module.exports = {
      // timehours = timehours.toString().length > 1 ? timehours : '0' + timehours
      // timeminutes = timeminutes.toString().length > 1 ? timeminutes : '0' + timeminutes
      // timeseconds = timeseconds.toString().length > 1 ? timeseconds : '0' + timeseconds
-      message.channel.send('🕒 ' + hours + ':' + minutes + ':' + seconds + ' ' + suffix)
+      message.channel.send('🕒'+ ' ' + hours + ':' + minutes + ':' + seconds + ' ' + suffix )
       //+ '\n:warning: `this time isnt really accurate, so sometimes it might show the wrong time`'
     }
 }

@@ -3,7 +3,7 @@ const talkedRecently = new Set();
 const Discord = require("discord.js");
 const fs = require("fs-extra");
 var adminlist = fs.readJSONSync('./admins.txt')
-var ssbans = fs.readJSONSync('C:\\Users\\Jacob Workman\\Desktop\\RetroJBOT-main\\ssbans.txt')
+var ssbans = fs.readJSONSync('./ssbans.txt')
 var waves = process.env.wave
 module.exports = {
     name: 'sswave',
@@ -13,9 +13,10 @@ module.exports = {
 var waves = process.env.wave
       if (talkedRecently.has(message.author.tag)) {
             message.channel.send(":alarm_clock: **Cooldown** You can only send one wave message per hour, Please slowdown. *tick tock*"); 
+            return
       }
       if (message.channel.nsfw == true) {//message.channel.send(":x: Server Send has shutdown for 5 days. Please come again. `Reason: Example`")
-        message.channel.send("🔞 A wave can't be sent in a nsfw channel.")
+        message.channel.send("🔞 A wave can't be sent in a nsfw channel. Sorry.")
           return;
       }
       talkedRecently.add(message.author.tag)

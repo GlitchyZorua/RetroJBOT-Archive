@@ -29,6 +29,7 @@
     "fund": "^1.0.0",
     "jimp": "^0.16.1",
     "metaweather": "0.0.2",
+    "nodejs-stock-info": "^0.1.20",
     "path": "^0.12.7",
     "progress": "^2.0.3",
     "random-animals-api": "^1.2.1",

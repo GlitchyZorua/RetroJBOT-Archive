@@ -1,0 +1,95 @@
+# Tor state file last generated on 2021-06-18 23:03:50 local time
+# Other times below are in UTC
+# You *do not* need to edit this file.
+
+CircuitBuildTimeBin 575 2
+CircuitBuildTimeBin 625 6
+CircuitBuildTimeBin 675 17
+CircuitBuildTimeBin 725 9
+CircuitBuildTimeBin 775 9
+CircuitBuildTimeBin 825 5
+CircuitBuildTimeBin 875 3
+CircuitBuildTimeBin 925 3
+CircuitBuildTimeBin 975 4
+CircuitBuildTimeBin 1025 7
+CircuitBuildTimeBin 1075 2
+CircuitBuildTimeBin 1125 1
+CircuitBuildTimeBin 1175 2
+CircuitBuildTimeBin 1225 1
+CircuitBuildTimeBin 1375 1
+CircuitBuildTimeBin 1425 2
+CircuitBuildTimeBin 1475 1
+CircuitBuildTimeBin 1775 1
+CircuitBuildTimeBin 2025 1
+CircuitBuildTimeBin 2075 1
+CircuitBuildTimeBin 2725 1
+CircuitBuildTimeBin 2775 1
+CircuitBuildTimeBin 2825 1
+CircuitBuildTimeBin 3125 1
+CircuitBuildTimeBin 3175 1
+CircuitBuildTimeBin 3225 1
+CircuitBuildTimeBin 4175 1
+CircuitBuildTimeBin 4825 1
+CircuitBuildTimeBin 5275 1
+CircuitBuildTimeBin 6075 1
+CircuitBuildTimeBin 6225 1
+CircuitBuildTimeBin 6275 1
+CircuitBuildTimeBin 6475 1
+CircuitBuildTimeBin 6775 1
+CircuitBuildTimeBin 6925 1
+CircuitBuildTimeBin 7175 1
+CircuitBuildTimeBin 7725 1
+CircuitBuildTimeBin 8625 1
+CircuitBuildTimeBin 8925 1
+CircuitBuildTimeBin 9675 1
+CircuitBuildTimeBin 10075 1
+CircuitBuildTimeBin 10125 1
+CircuitBuildTimeBin 11025 1
+CircuitBuildTimeBin 11125 1
+CircuitBuildTimeBin 11525 1
+CircuitBuildTimeBin 11575 1
+CircuitBuildTimeBin 12125 1
+Dormant 0
+Guard in=default rsa_id=43FDB91342564816F102A3EEBAEFFDC70F2BE1A6 nickname=simeon sampled_on=2021-05-06T02:35:29 sampled_idx=0 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-05T07:57:13 confirmed_idx=2 pb_use_attempts=56.000000 pb_use_successes=22.000000 pb_circ_attempts=203.000000 pb_circ_successes=200.000000 pb_successful_circuits_closed=152.000000
+Guard in=default rsa_id=F6740DEABFD5F62612FA025A5079EA72846B1F67 nickname=poiuty sampled_on=2021-05-01T14:44:27 sampled_idx=1 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-03T01:32:42 confirmed_idx=1 pb_circ_attempts=1.000000 pb_circ_successes=1.000000 pb_successful_circuits_closed=1.000000
+Guard in=default rsa_id=AF75670FD4F702655DF4B6A477CB488EDD1B87F9 nickname=bernie4president sampled_on=2021-05-06T01:10:12 sampled_idx=2 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-07T09:10:16 confirmed_idx=0
+Guard in=default rsa_id=6C94F282709D385C94087D5F6FB6D8F6648EE3D1 nickname=Unnamed sampled_on=2021-05-09T21:42:15 sampled_idx=3 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=B6942C63F1A596E6557D13FC0ACF8475A0A2AD3F nickname=owin sampled_on=2021-05-07T01:09:56 sampled_idx=4 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=16824F885D72B4FA7A5090E08D877E5404BC214D nickname=guidemenow sampled_on=2021-05-04T07:31:07 sampled_idx=5 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=79C674E6C1AC90687CCCF644D24C17AC1E535A3C nickname=gorlock sampled_on=2021-05-10T09:57:38 sampled_idx=6 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=B13C2C569F3FD0C530B7D96E5FF7933DF7A0E834 nickname=porte sampled_on=2021-05-10T11:41:46 sampled_idx=7 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=C369FA76D9F8C9535656CCD535187AFB975B00C5 nickname=Unnamed sampled_on=2021-05-10T21:14:49 sampled_idx=8 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=41E041EC676622FFEE59F56BC75B99CD0D47F653 nickname=hyperion sampled_on=2021-05-03T12:14:13 sampled_idx=9 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=03A6C11856113883CE89F7421CE74F3B4180B504 nickname=lrjstorrelay01 sampled_on=2021-05-11T01:15:24 sampled_idx=10 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=1F4105C688E835A56AF3D66C787677B57240FFA2 nickname=Unnamed sampled_on=2021-05-08T04:58:40 sampled_idx=11 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=BB637A4ADB6318DF194AB941C344AD4C4B9FC53A nickname=samurai sampled_on=2021-05-11T20:41:47 sampled_idx=12 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=25B694EA95F825F156C5DAE5607B3375E86C0C4E nickname=darrieux sampled_on=2021-05-12T00:45:52 sampled_idx=13 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=A1A2924158198592C3E88CB0DF23C14D9FE64328 nickname=sandstorm sampled_on=2021-05-11T06:02:02 sampled_idx=14 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=ADF4CD08B7861F2858FDD6555BEE907D28F2717E nickname=Lux3 sampled_on=2021-05-12T04:53:51 sampled_idx=15 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=CEC92F3BE8A2F3A46D3C042721D6BDBF2F40F4C5 nickname=boardwalk sampled_on=2021-05-10T20:59:14 sampled_idx=16 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=837D5EA513DF7FDDA36BE569C646151CDA4B9935 nickname=Brexit sampled_on=2021-05-08T20:29:04 sampled_idx=17 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=F1A7CE1B1D558DC24E39B6B30FF217ECCEECF141 nickname=Kings sampled_on=2021-04-30T21:00:15 sampled_idx=18 sampled_by=0.4.5.7 listed=1
+Guard in=default rsa_id=E86E75EA8F99ADF3C40B393C7CB4E3472EC40A0B nickname=Faaak sampled_on=2021-05-12T07:16:56 sampled_idx=19 sampled_by=0.4.5.7 listed=1
+Guard in=bridges rsa_id=011F2599C0E9B27EE74B353155E244813763C3E5 bridge_addr=85.31.186.98:443 sampled_on=2021-05-01T09:31:03 sampled_idx=0 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-08T12:07:21 confirmed_idx=11 pb_use_attempts=3.000000 pb_use_successes=3.000000 pb_circ_attempts=54.000000 pb_circ_successes=54.000000 pb_successful_circuits_closed=54.000000
+Guard in=bridges rsa_id=CDF2E852BF539B82BD10E27E9115A31734E378C2 bridge_addr=192.95.36.142:443 sampled_on=2021-05-12T01:00:01 sampled_idx=1 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-13T07:26:10 confirmed_idx=2
+Guard in=bridges rsa_id=2D82C2E354D531A68469ADF7F878FA6060C6BACA bridge_addr=193.11.166.194:27015 sampled_on=2021-05-01T00:49:10 sampled_idx=2 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-14T03:54:47 confirmed_idx=6
+Guard in=bridges rsa_id=1AE2C08904527FEA90C4C4F8C1083EA59FBC6FAF bridge_addr=193.11.166.194:27025 sampled_on=2021-05-05T11:00:01 sampled_idx=3 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-14T21:17:16 confirmed_idx=7
+Guard in=bridges rsa_id=86AC7B8D430DAC4117E9F42C9EAED18133863AAF bridge_addr=193.11.166.194:27020 sampled_on=2021-05-07T05:34:28 sampled_idx=4 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-11T22:03:31 confirmed_idx=8
+Guard in=bridges rsa_id=C5B7CD6946FF10C5B3E89691A7D3F2C122D2117C bridge_addr=45.145.95.6:27015 sampled_on=2021-05-06T21:03:47 sampled_idx=5 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-13T20:09:27 confirmed_idx=10
+Guard in=bridges rsa_id=D9A82D2F9C2F65A18407B1D2B764F130847F8B5D bridge_addr=37.218.245.14:38224 sampled_on=2021-05-11T03:01:47 sampled_idx=6 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-15T08:22:42 confirmed_idx=12
+Guard in=bridges rsa_id=C5B7CD6946FF10C5B3E89691A7D3F2C122D2117C bridge_addr=[2a0c:4d80:42:702::1]:27015 sampled_on=2021-05-04T19:46:03 sampled_idx=7 sampled_by=0.4.5.7 listed=1
+Guard in=bridges rsa_id=FB70B257C162BF1038CA669D568D76F5B7F0BABB bridge_addr=144.217.20.138:80 sampled_on=2021-05-03T19:32:45 sampled_idx=8 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-06-18T12:54:11 confirmed_idx=13
+Guard in=bridges rsa_id=91A6354697E6B02A386312F68D82CF86824D3606 bridge_addr=85.31.186.26:443 sampled_on=2021-05-07T11:45:13 sampled_idx=9 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-09T09:47:11 confirmed_idx=9
+Guard in=bridges rsa_id=0BAC39417268B96B9F514E7F63FA6FBA1A788955 bridge_addr=38.229.33.83:80 sampled_on=2021-05-04T22:24:46 sampled_idx=10 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-08T11:49:31 confirmed_idx=3
+Guard in=bridges rsa_id=10A6CD36A537FCE513A322361547444B393989F0 bridge_addr=146.57.248.225:22 sampled_on=2021-05-11T12:04:35 sampled_idx=11 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-03T18:04:20 confirmed_idx=0 pb_use_attempts=24.000000 pb_use_successes=24.000000 pb_circ_attempts=32.000000 pb_circ_successes=32.000000 pb_successful_circuits_closed=32.000000
+Guard in=bridges rsa_id=C8CBDB2464FC9804A69531437BCF2BE31FDD2EE4 bridge_addr=38.229.1.78:80 sampled_on=2021-05-12T07:45:31 sampled_idx=12 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-16T01:13:26 confirmed_idx=4
+Guard in=bridges rsa_id=5EDAC3B810E12B01F6FD8050D2FD3E277B289A08 bridge_addr=51.222.13.177:80 sampled_on=2021-05-06T09:23:16 sampled_idx=13 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-08T00:21:11 confirmed_idx=1
+Guard in=bridges rsa_id=74FAD13168806246602538555B5521A0383A1875 bridge_addr=209.148.46.65:443 sampled_on=2021-05-06T01:52:54 sampled_idx=14 sampled_by=0.4.5.7 listed=1 confirmed_on=2021-05-09T17:30:26 confirmed_idx=5
+Guard in=bridges rsa_id=2D82C2E354D531A68469ADF7F878FA6060C6BACA bridge_addr=193.11.166.194:27015 sampled_on=2021-05-13T16:11:11 sampled_idx=15 sampled_by=0.4.5.7 listed=1
+Guard in=bridges rsa_id=C8CBDB2464FC9804A69531437BCF2BE31FDD2EE4 bridge_addr=38.229.1.78:80 sampled_on=2021-05-10T22:52:08 sampled_idx=16 sampled_by=0.4.5.7 listed=1
+Guard in=bridges rsa_id=74FAD13168806246602538555B5521A0383A1875 bridge_addr=209.148.46.65:443 sampled_on=2021-05-11T18:37:49 sampled_idx=17 sampled_by=0.4.5.7 listed=1
+Guard in=bridges rsa_id=86AC7B8D430DAC4117E9F42C9EAED18133863AAF bridge_addr=193.11.166.194:27020 sampled_on=2021-05-16T00:15:39 sampled_idx=18 sampled_by=0.4.5.7 listed=1
+Guard in=bridges rsa_id=1AE2C08904527FEA90C4C4F8C1083EA59FBC6FAF bridge_addr=193.11.166.194:27025 sampled_on=2021-05-18T18:12:12 sampled_idx=19 sampled_by=0.4.5.7 listed=1
+LastWritten 2021-06-18 23:03:50
+TorVersion Tor 0.4.5.7 (git-83f895c015de5520)
+TotalBuildTimes 105
