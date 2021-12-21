@@ -52,8 +52,6 @@ String.prototype.aremovepingsh = function() {
       .replace(/<@&(\d+)>/gi, "(a)")
       .replace(/(@(?:everyone|here))/gi, '(a)')
       .replace(/<@&(\d+)>/gi, "no")
-      .replace("nigger", "no")
-      .replace("Nigger", "no")
 };
 
 
