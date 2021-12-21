@@ -27,15 +27,13 @@ String.prototype.removepings = function() {
         .replace(/(@(?:everyone|here))/gi, 'no') //@everyone/here ping
         .replace(/<@&(\d+)>/gi, "no") //role ping
         .replace(/<@!?(\d+)>/gi, "no") //user ping
-        .replace("nigger", "no")
-        .replace("Nigger", "no")
+
 };
 String.prototype.rpremovepings = function() {
     return this
         .replace(/(@(?:everyone|here))/gi, 'no')
         .replace(/<@&(\d+)>/gi, "no")
-        .replace("nigger", "no")
-        .replace("Nigger", "no")
+
 };
 String.prototype.aremovepings = function() {
   return this
@@ -43,8 +41,6 @@ String.prototype.aremovepings = function() {
       .replace(/<@&(\d+)>/gi, "no")
       .replace(/(@(?:everyone|here))/gi, 'no')
       .replace(/<@&(\d+)>/gi, "no")
-      .replace("nigger", "no")
-      .replace("Nigger", "no")
 };
 String.prototype.aremovepingsh = function() {
   return this
