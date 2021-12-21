@@ -18,7 +18,7 @@ if (thingtosend === ""){
 message.channel.send(":x: Syntax Error! Syntax: j.wolfram <question>")
 return
 }
-tr.request('https://api.wolframalpha.com/v1/result?i='+encodeURIComponent(thingtosend)+'&appid=G3UG26-V9K9QVY5JA', function (err, res, body) {
+tr.request('https://api.wolframalpha.com/v1/result?i='+encodeURIComponent(thingtosend)+'&appid=', function (err, res, body) {
   if (err){
     message.channel.send(":x: An error occurred. ")
     return
