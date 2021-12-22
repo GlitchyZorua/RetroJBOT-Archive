@@ -37,7 +37,7 @@
     "superagent": "^6.1.0",
     "thispersondoesnotexist": "^1.0.1",
     "tor-request": "^3.1.0",
-    "tunnel-agent": "^0.3.0",
+    "tunnel-agent": "^0.6.0",
     "util": "^0.12.3",
     "weather-js": "^2.0.0",
     "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz",
