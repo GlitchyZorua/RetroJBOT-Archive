@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs-extra");
 var adminlist = fs.readJSONSync('./admins.txt')
-var ssbans = fs.readJSONSync('C:\\Users\\Jacob Workman\\Desktop\\RetroJBOT-main\\ssbans.txt')
+var ssbans = fs.readJSONSync('./ssbans.txt')
 const ok = new Set();
 module.exports = {
     name: 'ss',
