@@ -1,4 +1,7 @@
-Note: Names that *DOESN'T* have the * in them, means they are not realeased yet
+* = released
+[current] = the current version
+
+
 RetroJBOT Apple Edition Again... *
 RetroJBOT Banana Edition Again... *
 RetroJBOT Carrot Edition  Again... *
@@ -6,7 +9,7 @@ RetroJBOT Lemon Edition Again... *
 RetroJBOT Lime Edition Again... *
 RetroJBOT Orange Edition Again... *
 RetroJBOT Pie Edition Again... *
-RetroJBOT Avocado Edition Again...
+RetroJBOT Avocado Edition Again... * [current]
 RetroJBOT Cherry Edition Again...
 RetroJBOT Green Apple Again...
 --------------------------
@@ -98,7 +101,6 @@ RetroJBOT Golden King Edition
 RetroJBOT Diamond King Edition
 RetroJBOT Ruby King Edition
 RetroJBOT Sapphire King Edition
-
 
 Math Editions
 RetroJBOT Pi Edition
