@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Jacobwworkman/RetroJBOT#readme",
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.2",
     "ddg": "0.0.3",
     "ddg-scraper": "^1.0.2",
     "discord-buttons": "^2.4.1",
