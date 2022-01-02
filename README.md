@@ -1,11 +1,12 @@
 # RetroJBOT
 A discord bot by Jacobw
 
-
 RetroJBOT is a multi-purpose bot.
 
 Command List: https://gist.github.com/Jacobwworkman/e2c1ce52e0c1edeab2405e8d3e7259b0
+
 Bot invite: https://urls.ziad87.net/8SjwND / https://discord.com/oauth2/authorize?client_id=612742660658167840&permissions=8&scope=bot
+
 Discord Server: https://discord.gg/EYt579b
 
 
