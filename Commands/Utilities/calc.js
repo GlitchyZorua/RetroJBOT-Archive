@@ -142,6 +142,35 @@ module.exports = {
             .replace(/funny number/i, 69)
             .replace(/weed number/i, 420)
             .replace(/leet number/i, 1337)
+          };
+          var arg = message.content.slice(7).filters()
+    if (arg === ""){
+    message.channel.send(":x: Syntax Error! Syntax: j.calc <text>")
+    return;
+    }
+    if (arg === "egg"){
+    message.channel.send(":egg:")
+    return
+    }
+    if (arg === "once in a blue moon"){
+      message.channel.send("🖩 once in a blue moon = 1.16699016 × 10^−8 hertz")
+      return
+    }
+    /*/
+    var nanieeggyes = nanieegg[Math.floor(Math.random() * nanieegg.length)]
+    if (!a) return message.channel.send("🖩 " + nanieeggyes)
+    /*/
+    require('https').get('https://api.mathjs.org/v4/?expr='+encodeURIComponent(arg), function (d) { d.on('data', function (n) { message.channel.send("🖩 " + String(n)) })
+  })
+  return
+    message.channel.send(":x: Discord API failed. Calculation Aborted.");
+  }
+}
+//fuck it, for now, just put this a side
+
+
+
+/*/
             //.replace("rotate 8", "Infinity")
             //.replace("rotate 6", 9)
             //.replace("rotate 9", 6)
@@ -238,27 +267,4 @@ module.exports = {
 
             // fuck i need to fix the numbers not replacing the second number gijopfdjgklfdjgkfldghfdj
             // this code is aleady getting messy
-          };
-          var arg = message.content.slice(7).filters().removepings()
-    if (arg === ""){
-    message.channel.send(":x: Syntax Error! Syntax: j.calc <text>")
-    return;
-    }
-    if (arg === "egg"){
-    message.channel.send(":egg:")
-    return
-    }
-    if (arg === "once in a blue moon"){
-      message.channel.send("🖩 once in a blue moon = 1.16699016 × 10^−8 hertz")
-      return
-    }
-    /*/
-    var nanieeggyes = nanieegg[Math.floor(Math.random() * nanieegg.length)]
-    if (!a) return message.channel.send("🖩 " + nanieeggyes)
-    /*/
-    require('https').get('https://api.mathjs.org/v4/?expr='+encodeURIComponent(arg), function (d) { d.on('data', function (n) { message.channel.send("🖩 " + String(n)) })
-  })
-  return
-    message.channel.send(":x: Discord API failed. Calculation Aborted.");
-  }
-}
+            /*/
