@@ -3,13 +3,14 @@ const Discord = require('discord.js')
 const fs = require('fs-extra')
 var botbans = fs.readJSONSync('./botbans.txt')
 var disableddms = 0
+var disableinteractions = 0
 module.exports = (client, message) => {
     if (message.author.bot) return
     if (message.channel.type === 'dm') {
     if (disableddms === 1){
-        message.channel.send(":no_entry: DMS has been disabled.");
+        message.channel.send(":no_entry: DMS are disabled by the bot creator.");
         return
-    }
+         }
     }
         var prefix = process.env.Prefix
         var escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -19,10 +20,15 @@ module.exports = (client, message) => {
                 //console.log(matchedPrefix.length)
     
         console.log(chalk.yellow(`(${message.author.id} || ${message.author.tag}) Checking client to see if command`))
+
         if (botbans.bans.includes(message.author.id)) {
             console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: User account id banned`))
             message.channel.send(":no_entry: This account has been blocked from RetroJBOT.\n\nTo appeal, please visit https://forms.gle/njmHVkYrFgCUckWbA. Any ALT accounts will be punished.")
             return;
+        }
+        if (disableinteractions == 1){
+            message.channel.send(":x: RetroJBOT commands are disabled by the bot owner. Sorry!")
+            return
         }
         var cmdCall = message.content.slice(matchedPrefix.length).split(' ').shift().toLowerCase()
         var command = client.commands.get(cmdCall) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(cmdCall))
@@ -48,9 +54,10 @@ module.exports = (client, message) => {
         
             }
         } else {
+        console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: Command not found.`))
         message.channel.send(new Discord.MessageEmbed()
         .setColor('RED')
-        .setDescription('Invalid Command. If in doubt, check if: \n- You spelled the command correctly\n- Check that its a valid command (j.help)\n - If you want, you can suggest this command with `j.feedback <text>`')
+        .setDescription(':no_entry: Invalid Command. If in doubt, check if: \n- You spelled the command correctly\n- Check that its a valid command (j.help)\n - If you want, you can suggest this command with `j.feedback <text>`')
         .setTitle('Oops.')
         )
         }
