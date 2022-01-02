@@ -33,8 +33,8 @@ module.exports = (client, message) => {
         if (command) {
             console.log(chalk.greenBright(`(${message.author.id} || ${message.author.tag}) Has used command: ${command.name}`))
             args = args.slice(1)
-            if (command.owner === true && message.author.id !== "376901199225552898") return message.reply("no")
-            if (command.permission && !message.member.hasPermission(command.permission)) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setDescription(`You need the **${command.permission}** permission to use this command`))
+            //if (command.owner === true && message.author.id !== "376901199225552898") return message.reply("no")
+            //if (command.permission && !message.member.hasPermission(command.permission)) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setDescription(`You need the **${command.permission}** permission to use this command`))
             try {
                 command.execute(client, message, args)
             } catch (e) {
@@ -47,5 +47,11 @@ module.exports = (client, message) => {
                 )
         
             }
+        } else {
+        message.channel.send(new Discord.MessageEmbed()
+        .setColor('RED')
+        .setDescription('Invalid Command. If in doubt, check if: \n- You spelled the command correctly\n- Check that its a valid command (j.help)\n - If you want, you can suggest this command with `j.feedback <text>`')
+        .setTitle('Oops.')
+        )
         }
     }
