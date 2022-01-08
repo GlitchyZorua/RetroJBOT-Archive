@@ -1,3 +1,5 @@
+const fs = require('fs-extra')
+var ver = fs.readFileSync('./Bot Files/ver.txt', {"encoding": "utf-8"})
 require('dotenv').config()
 console.log("########  ######## ######## ########   #######        ## ########   #######  ########")
 console.log("##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## ")
@@ -8,9 +10,8 @@ console.log('##     ## ########    ##    ##     ##  #######   ######  ########  
 console.log('                            ╭─────────────────────────────╮')
 console.log('                            │ Connecting to discord.js... │')
 console.log('                            ╰─────────────────────────────╯')
-console.log('                    v'+process.env.version)
+console.log('                    v'+ver) // Input a version number or something.
 const Discord = require('discord.js')
-const fs = require('fs-extra')
 const path = require('path')
 const chalk = require('chalk')
 let services_stopped = 0;
@@ -19,7 +20,7 @@ var adminlist = fs.readJSONSync('./admins.txt')
 var ssbans = fs.readJSONSync('./ssbans.txt')
 //const animals = require('random-animals-api');
 var ProgressBar = require('progress');
-var bar = new ProgressBar(':bar :current/:total', { total: 103 });
+//var bar = new ProgressBar(':bar :current/:total', { total: 103 });
 const waves = 0
 const superagent = require('superagent');
 String.prototype.removepings = function() {
@@ -53,10 +54,8 @@ String.prototype.aremovepingsh = function() {
 
 
 const client = new Discord.Client()
-client.login(process.env.TOKEN)
-client.commands = new Discord.Collection()
-
-
+client.login(process.env.TOKEN) // Your token goes here
+client.commands = new Discord.Collection() 
 let errors = []
 
 console.log("                               ╭───────────────────────────────────╮")
@@ -82,7 +81,7 @@ modules.forEach(module => {
             //console.log(chalk.blueBright(`│${FittedCMDName}│✅│\n├────────────────────┼──┤`))
             command.module = module
             client.commands.set(command.name, command)
-            bar.tick()
+           // bar.tick()
         } catch (error) {
             const FittedCMDName = `${CMD}`.padEnd(20)
             //console.log(chalk.blueBright(`│${FittedCMDName}│❌│\n├────────────────────┼──┤`))
