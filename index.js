@@ -19,7 +19,7 @@ var counter = 0;
 var adminlist = fs.readJSONSync('./admins.txt')
 var ssbans = fs.readJSONSync('./ssbans.txt')
 //const animals = require('random-animals-api');
-var ProgressBar = require('progress');
+//var ProgressBar = require('progress');
 //var bar = new ProgressBar(':bar :current/:total', { total: 103 });
 const waves = 0
 const superagent = require('superagent');
@@ -61,7 +61,8 @@ let errors = []
 console.log("                               ╭───────────────────────────────────╮")
 console.log("                               │ Connected to discord. Now finding │")
 console.log("                               | javascript files.                 │")
-console.log("                               ╰───────────────────────────────────╯") 
+console.log("                               ╰───────────────────────────────────╯")
+
 const modules = fs
     .readdirSync('Commands')
     .filter(file => fs.statSync(path.join('Commands', file)).isDirectory())
