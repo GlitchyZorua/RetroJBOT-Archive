@@ -11,7 +11,7 @@ Discord Server: https://discord.gg/EYt579b
 
 # Self-hosting
 
-It is highly recommended that you run RetroJBOT on a server running on a Windows 10. 
+It is highly recommended that you run RetroJBOT on a server running on a Windows 10. Windows 8/8.1 Might work, but untested
 
 Linux is not yet supported, maybe when I find a way, Linux will be supported
 # Licensing
