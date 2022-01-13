@@ -9,7 +9,11 @@ Bot invite: https://urls.ziad87.net/8SjwND / https://discord.com/oauth2/authoriz
 
 Discord Server: https://discord.gg/EYt579b
 
+# Self-hosting
 
+It is highly recommended that you run RetroJBOT on a server running on a Windows 10. 
+
+Linux is not yet supported, maybe when I find a way, Linux will be supported
 # Licensing
 
 ## GNU AFFERO GENERAL PUBLIC LICENSE
