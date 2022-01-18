@@ -1,0 +1,1 @@
+This is where temporary files go. RetroJBOT Clears this once and a day
