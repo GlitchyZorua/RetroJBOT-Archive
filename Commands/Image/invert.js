@@ -2,10 +2,8 @@ const fs = require('fs')
 module.exports = {
     name: 'invert',
     async execute(client, message) {
-      message.channel.send(":x: Command disabled. Fix me Ojproj! FIX ME!")
-      return
       const Jimp = require('jimp');
-      var thingtosend = message.content.slice(4)
+      var thingtosend = message.content.slice(8)
       message.channel.send('<a:Loading_Color:759914061696860202> *Please wait...*').then(msg => {
         if(message.attachments.first()) {
           var imbib = message.attachments.first()
@@ -16,6 +14,7 @@ module.exports = {
           var image = 'https://cdn.discordapp.com/avatars/' + aaaa.id + '/' + aaaa.avatar + '.png?size=1024'
         } else {
         message.channel.send(":x: No image attached!")
+        return
         }
         Jimp.read(image, (err, img) => {
           if (err) throw err;
