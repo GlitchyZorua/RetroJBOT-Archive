@@ -4,7 +4,7 @@ String.prototype.removepings = function() {
       .replace(/(@(?:everyone|here))/gi, 'no')
       .replace(/<@&(\d+)>/gi, "no")
       .replace("nigger", "no")
-      .replace("Nigger", "no")
+      .replace("Nigger", "no") //RACIST.
 };
 module.exports = {
     name: 'say',

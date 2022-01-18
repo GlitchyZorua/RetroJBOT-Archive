@@ -45,6 +45,6 @@ module.exports = {
               clock = "🕐";
              break;
           }
-        message.channel.send(`:arrow_up: Uptime:  ${days}:${hours}:${minutes}:${seconds}\n\n:warning: Due to server limitations, the bot might go offline with or without notice.`);
+        message.channel.send(`:arrow_up: Uptime: ${days}:${hours}:${minutes}:${seconds}\n\n:warning: Due to server limitations, the bot might go offline with or without notice.`);
     }
 }
