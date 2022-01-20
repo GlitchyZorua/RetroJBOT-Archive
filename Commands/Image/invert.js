@@ -7,8 +7,8 @@ module.exports = {
       message.channel.send('<a:Loading_Color:759914061696860202> *Please wait...*').then(msg => {
         if(message.attachments.first()) {
           var imbib = message.attachments.first()
-          var imbibi = imbib.name.toLowerCase().message.content.slice(8)
-          if(imbibi.endsWith('.gif') || imbibi.endsWith('.png') || imbibi.endsWith('.jpg')) { var image = message.attachments.first() } else { return message.reply('File not supported.') };
+          var imbibi = imbib.name.toLowerCase()
+          if(imbibi.endsWith('.gif') || imbibi.endsWith('.png') || imbibi.endsWith('.jpg')) { var image = message.attachments.first() } else { return message.reply(':x: File not supported.') };
         } else if(message.mentions.users.first()) {
           var aaaa = message.mentions.users.first()
           var image = 'https://cdn.discordapp.com/avatars/' + aaaa.id + '/' + aaaa.avatar + '.png?size=1024'
@@ -20,15 +20,10 @@ module.exports = {
           if (err) throw err;
           message.channel.startTyping();
           img
-            .invert()
+           .invert()
             .write('invert.png')
             message.channel.send({files: ['invert.png']})
             message.channel.stopTyping(true);
-        });
-        fs.unlink('invert.png', (err) => {
-          if (err) {
-              throw err;
-          }
         });
   });
     }
