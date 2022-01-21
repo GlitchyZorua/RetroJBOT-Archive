@@ -1,8 +1,9 @@
-const talkedRecently = new Set();
+
 
 module.exports = {
     name: 'slots',
     async execute(client, message, args) {
+    const talkedRecently = new Set();
       if (talkedRecently.has(message.author.id)) {
          message.channel.send(":alarm_clock: **Cooldown** You can only use the slots per minute, Please slowdown. *tick tock* ");
    } else {
@@ -31,6 +32,10 @@ module.exports = {
             setTimeout(() => {
                msg.edit(d('0')+'\n:slot_machine: You lost!');
             }, 2000);
+           setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 60000);
          });
       }
     return
