@@ -3,8 +3,6 @@ String.prototype.removepings = function() {
       .replace(/(@(?:everyone|here))/gi, 'no') //@everyone/here ping
       .replace(/<@&(\d+)>/gi, "no") //role ping
       .replace(/<@!?(\d+)>/gi, "no") //user ping
-      .replace("nigger", "no")
-      .replace("Nigger", "no")
 };
 const Discord = require('discord.js')
 module.exports = {
@@ -39,14 +37,14 @@ module.exports = {
              * Make sure you run this on a member, not a user!
              * There are big differences between a user and a member
              */
-            member.kick('Optional reason that will display in the audit logs').then(() => {
+            member.kick('Kicked by RetroJBOT').then(() => {
               // We let the message author know we were able to kick the person
               message.reply(`Successfully kicked ` + message.content.slice(6));
             }).catch(err => {
               // An error happened
               // This is generally due to the bot not being able to kick the member,
               // either due to missing permissions or role hierarchy
-              message.reply(':x: I was unable to kick the member. `This is generally due to the bot not being able to ban the member, either due to missing permissions or role hierarchy. if that is not the case, please contact my creator, with j.feedback or just dm him. (Jacobw#8117) Here is the developer error message.`\n'+eegg[Math.floor(Math.random() * eegg.length)] + "\n```js" + "\n" + inspect(error));
+              message.reply(':x: I was unable to kick the member. This is generally due to the bot not being able to ban the member, either due to missing permissions or role hierarchy. if that is not the case, please contact my creator, with j.feedback or just dm him. (Jacobw#8117)');
               // Log the error
               console.error(err);
             });

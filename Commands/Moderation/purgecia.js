@@ -10,6 +10,8 @@ const Discord = require('discord.js')
 module.exports = {
     name: 'purgecia',
     async execute(client, message) {
+        message.channel.send(':x: being rewritten');
+return
       if (message.channel instanceof Discord.DMChannel) { //do not execute
         message.channel.send(':bomb: :no_entry_sign: You cannot use this command in dms. **The cia has blocked this command from dms.**');
         return;

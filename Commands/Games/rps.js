@@ -13,7 +13,14 @@ module.exports = {
          .addField('You chose', b(userchoice))
          .addField('I chose', b(choice))
          .setFooter(c(choice, userchoice))
-      message.channel.send({embed: embed});
+        message.channel.send({embed: embed}).catch(err => {
+        message.reply('⛔ Oops. Something went wrong! Please report this error to my creator!'+'\n```js\n'+err+'```');
+        console.error(err);
+        });
           return
     }
 }
+
+// Code created by haryie.
+// Rest in peace haryie, you will be missed.
+//             2005 - 2021🌹

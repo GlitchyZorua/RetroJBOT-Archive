@@ -1,11 +1,16 @@
-const talkedRecently = new Set();
+const ok = new Set();
 
 module.exports = {
     name: 'slots',
     async execute(client, message, args) {
-      if (talkedRecently.has(message.author.id)) {
-         message.channel.send(":alarm_clock: **Cooldown** You can only use the slots per minute, Please slowdown. *tick tock* ");
+      if (ok.has(message.author.id)) {
+         message.channel.send(":alarm_clock: **Cooldown** You can only use the slots per minute, Please slowdown. It's not like you are at a casino or something. *tick tock* ");
    } else {
+      ok.add(message.author.id);
+      setTimeout(() => {
+        // Removes the user from the set after a minute
+        ok.delete(message.author.id);
+      }, 60000);
       let a = (r) => { return Math.floor(Math.random() * r.length) };
       let b = (r) => { return r.replace(/\[1]/g,':strawberry:').replace(/\[2]/g,':pineapple:').replace(/\[3]/g,':slot_machine:').replace(/\[4]/g,':seven:'); };
       let c = ['1','2'][a(['1','2'])];
@@ -20,7 +25,10 @@ module.exports = {
             setTimeout(() => {
                msg.edit(d('1')+'\n:slot_machine: You won!');
             }, 2000);
-         });
+         }).catch(err => {
+            message.reply('⛔ Oops. Something went wrong! Please report this error to my creator!'+'\n```js\n'+err+'```');
+            console.error(err);
+          });
       } else {
          message.channel.send(d()).then(msg => {
             for(let i = 0; i < 7; i++){
@@ -31,7 +39,10 @@ module.exports = {
             setTimeout(() => {
                msg.edit(d('0')+'\n:slot_machine: You lost!');
             }, 2000);
-         });
+         }).catch(err => {
+            message.reply('⛔ Oops. Something went wrong! Please report this error to my creator!'+'\n```js\n'+err+'```');
+            console.error(err);
+          });
       }
     return
     }

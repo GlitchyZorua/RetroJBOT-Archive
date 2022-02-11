@@ -46,7 +46,6 @@ module.exports = {
           client.channels.cache.get('617865643307434025').send(no)
           var tipzero = [""," You can join my server with j.invite"]
           message.channel.send(':white_check_mark: Sent to my server!'+tipzero[Math.floor(Math.random() * tipzero.length)])
-          console.log(message.author.tag + ": " + message.content.slice(5));
         //  ssnum++;
         }
         }
