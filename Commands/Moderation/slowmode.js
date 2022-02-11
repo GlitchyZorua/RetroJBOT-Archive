@@ -3,13 +3,15 @@ String.prototype.removepings = function() {
       .replace(/(@(?:everyone|here))/gi, 'no') //@everyone/here ping
       .replace(/<@&(\d+)>/gi, "no") //role ping
       .replace(/<@!?(\d+)>/gi, "no") //user ping
-      .replace("nigger", "no")
-      .replace("Nigger", "no")
 };
 const Discord = require('discord.js')
 module.exports = {
     name: 'slowmode',
     async execute(client, message) {
+      if (message.channel instanceof Discord.DMChannel) { //do not execute
+        message.channel.send(':no_entry_sign: You cannot use this command in dms.');
+        return;
+      }
       let thingtosend = message.content.slice(11).removepings()
       if (thingtosend === ""){
         message.channel.send(":x: Syntax Error! Syntax: j.slowmode (<#|off>)")

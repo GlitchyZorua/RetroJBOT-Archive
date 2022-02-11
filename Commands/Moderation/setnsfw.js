@@ -10,6 +10,10 @@ const Discord = require('discord.js')
 module.exports = {
     name: 'setnsfw',
     async execute(client, message) {
+      if (message.channel instanceof Discord.DMChannel) { //do not execute
+        message.channel.send(':no_entry_sign: You cannot use this command in dms.');
+        return;
+      }
       if (message.content.substring(10) === ""){
         message.channel.send(":x: Syntax Error! syntax: j.setnsfw <(on|off)>")
       }
