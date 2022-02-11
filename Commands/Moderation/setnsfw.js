@@ -16,6 +16,7 @@ module.exports = {
       }
       if (message.content.substring(10) === ""){
         message.channel.send(":x: Syntax Error! syntax: j.setnsfw <(on|off)>")
+       return
       }
       if (message.channel instanceof Discord.DMChannel) { //do not execute
         message.channel.send(':no_entry_sign: You cannot use this command in dms. Why the hell would you post nsfw in my dms? You are a creep.');
