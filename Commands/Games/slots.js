@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-const ok = new Set();
-=======
 
->>>>>>> 78bcdfe86150005927f854140194de7a2cf6c4bd
+const ok = new Set();
 
 module.exports = {
     name: 'slots',
     async execute(client, message, args) {
-<<<<<<< HEAD
       if (ok.has(message.author.id)) {
          message.channel.send(":alarm_clock: **Cooldown** You can only use the slots per minute, Please slowdown. It's not like you are at a casino or something. *tick tock* ");
-=======
-    const talkedRecently = new Set();
-      if (talkedRecently.has(message.author.id)) {
-         message.channel.send(":alarm_clock: **Cooldown** You can only use the slots per minute, Please slowdown. *tick tock* ");
->>>>>>> 78bcdfe86150005927f854140194de7a2cf6c4bd
    } else {
       ok.add(message.author.id);
       setTimeout(() => {
@@ -49,18 +40,10 @@ module.exports = {
             setTimeout(() => {
                msg.edit(d('0')+'\n:slot_machine: You lost!');
             }, 2000);
-<<<<<<< HEAD
          }).catch(err => {
             message.reply('⛔ Oops. Something went wrong! Please report this error to my creator!'+'\n```js\n'+err+'```');
             console.error(err);
           });
-=======
-           setTimeout(() => {
-          // Removes the user from the set after a minute
-          talkedRecently.delete(message.author.id);
-        }, 60000);
-         });
->>>>>>> 78bcdfe86150005927f854140194de7a2cf6c4bd
       }
     return
     }

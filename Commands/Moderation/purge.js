@@ -10,3 +10,4 @@ module.exports = {
     async execute(client, message) {
      message.channel.send(':x: Being rewritten.');
   }
+}
