@@ -12,11 +12,8 @@ module.exports = {
         message.channel.send(':no_entry_sign: You cannot use this command in dms.');
         return;
       }
-      if (message.author.bot) {
-        message.channel.send(':x: no.');
-      } else {
         if (!message.member.hasPermission("KICK_MEMBER")) {
-          message.reply('Your permissions forbid you to kick someone.');
+          message.channel.send('⛔ Your permissions forbid you to kick someone.');
           return
         }
         //    if (permArray.indexOf(true) == -1) {
@@ -39,7 +36,7 @@ module.exports = {
              */
             member.kick('Kicked by RetroJBOT').then(() => {
               // We let the message author know we were able to kick the person
-              message.reply(`Successfully kicked ` + message.content.slice(6));
+              message.channel.send(`🦶 ✔ Successfully kicked ` + message.content.slice(6));
             }).catch(err => {
               // An error happened
               // This is generally due to the bot not being able to kick the member,
@@ -59,4 +56,3 @@ module.exports = {
         return
       }
     }
-}

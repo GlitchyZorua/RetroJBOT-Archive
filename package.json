@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Jacobwworkman/RetroJBOT#readme",
   "dependencies": {
     "chalk": "^4.1.2",
+    "d.js": "^0.7.5",
     "ddg": "0.0.3",
     "ddg-scraper": "^1.0.2",
     "discord-buttons": "^2.4.1",
@@ -31,7 +32,9 @@
     "lodash": "^4.17.21",
     "metaweather": "0.0.2",
     "nodejs-stock-info": "^0.1.20",
+    "npm": "^8.5.2",
     "path": "^0.12.7",
+    "pipe": "^1.1.0",
     "progress": "^2.0.3",
     "random-animals-api": "^1.2.1",
     "stocks": "^1.0.1",
@@ -42,7 +45,7 @@
     "util": "^0.12.3",
     "weather-js": "^2.0.0",
     "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz",
-    "xkcd-api": "^1.2.0",
+    "xkcd-api": "^1.0.1",
     "yahoo-finance": "^0.3.7"
   }
 }

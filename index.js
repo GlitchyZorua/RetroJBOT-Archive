@@ -112,3 +112,34 @@ fs.readdir('./Events', (err, files) => {
     })
    // console.log(chalk.blueBright(`╰────────────────────┴──╯`))
 })
+
+client.on('message', message => {
+    function aaaaa(){
+        if (message.guild.id === "462290884537352202"){
+            message.reply("⛔ Look. I know its fun and all, but this command is disabled to prevent people from grabbing and leaving the server. If you are one of those people who goes around and starts stealing shit and leaving, Fuck off. Don't come back here ever again. Sorry to ruin the fun.")
+        }
+    }
+      if (message.content.startsWith('pls rob')) {
+       aaaaa()
+      }
+      if (message.content.startsWith('pls steal')) {
+        aaaaa()
+      }
+      if (message.content.startsWith('pls bankrob')) {
+        aaaaa()
+      }
+      if (message.content.startsWith('pls ripoff')) {
+        aaaaa()
+      }
+      if (message.content.startsWith('pls heist')) {
+        aaaaa()
+      }
+      if (message.guild.id === "462290884537352202"){
+      if (message.content.startsWith('pls buy retrojbot')) {
+        message.channel.send('Are you going to adopt me?!')
+      }
+      if (message.content.startsWith('pls buy ojchan')){
+        message.channel.send('you fucking what')
+      }
+    }
+    });

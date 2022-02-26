@@ -28,10 +28,12 @@ module.exports = (client, message) => {
                 //console.log(matchedPrefix.length)
     
         console.log(chalk.yellow(`(${message.author.id} || ${message.author.tag}) Checking client to see if command`))
-        if (eee.es.includes(message.guild.id)){
-        console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: Server Excluded.`))
-         message.channel.send('⛔ **Oops. This server is excluded from RetroJBOT, Sorry!**')
-         return
+        if (!message.channel.type === 'dm') {
+            if (eee.es.includes(message.guild.id)){
+             console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: Server Excluded.`))
+             message.channel.send('⛔ **Oops. This server is excluded from RetroJBOT, Sorry!**')
+             return
+            }
         }
         if (botbans.bans.includes(message.author.id)) {
             console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: User account id banned`))
