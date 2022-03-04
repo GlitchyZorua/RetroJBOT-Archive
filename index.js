@@ -112,7 +112,7 @@ fs.readdir('./Events', (err, files) => {
     })
    // console.log(chalk.blueBright(`╰────────────────────┴──╯`))
 })
-
+/*/
 client.on('message', message => {
     function aaaaa(){
         if (message.guild.id === "462290884537352202"){
@@ -143,3 +143,6 @@ client.on('message', message => {
       }
     }
     });
+    /*/
+
+     //fuck you slash commands
