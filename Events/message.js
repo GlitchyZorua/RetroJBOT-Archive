@@ -14,7 +14,7 @@ module.exports = (client, message) => {
         return
     }
     if (message.author.bot) return
-    if (message.channel.type === 'dm') {
+    if (message.channel.type == 'dm') {
     if (disableddms === 1){
         message.channel.send(":no_entry: DMS are disabled by the bot creator.");
         return
@@ -28,7 +28,7 @@ module.exports = (client, message) => {
                 //console.log(matchedPrefix.length)
     
         console.log(chalk.yellow(`(${message.author.id} || ${message.author.tag}) Checking client to see if command`))
-        if (!message.channel.type === 'dm') {
+        if (message.channel.type !== 'dm') {
             if (eee.es.includes(message.guild.id)){
              console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: Server Excluded.`))
              message.channel.send('⛔ **Oops. This server is excluded from RetroJBOT, Sorry!**')

@@ -2,7 +2,7 @@
 
 module.exports = {
     name: 'wiserock',
-    async execute(client, message, args) {
+    async execute(_client, message, _args) {
 
 // You can call me out for using old discord.js documents to make this. I don't care tbh ¯\_(ツ)_/¯
 
@@ -22,7 +22,6 @@ return ['0️⃣', '1️⃣','2️⃣','3️⃣'].includes(reaction.emoji.name) 
 sentMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 .then(collected => {
   const reaction = collected.first();
-
   if (reaction.emoji.name === '0️⃣') {
     message.channel.send('<:Big_wise_rock:946959662320877589> Feel free to come back anytime for advice!');
       return
@@ -60,10 +59,9 @@ sentMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
               }, 2000);
               return
             }
-}).catch(_collected => {
-  message.reply('⏱ Oops, You took too long to react!');
-});
-});
-
+}).catch(function (_collected) {
+    message.reply('⏱ Oops, You took too long to react!');
+  });
+})
     }
 }
