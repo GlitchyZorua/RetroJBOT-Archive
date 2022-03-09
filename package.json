@@ -17,15 +17,12 @@
   },
   "homepage": "https://github.com/Jacobwworkman/RetroJBOT#readme",
   "dependencies": {
-    "@discordjs/builders": "^0.12.0",
-    "@discordjs/rest": "^0.3.0",
     "chalk": "^4.1.2",
     "d.js": "^0.7.5",
     "ddg": "0.0.3",
     "ddg-scraper": "^1.0.2",
-    "discord-api-types": "^0.27.3",
     "discord-buttons": "^2.4.1",
-    "discord.js": "^12.5.3",
+    "discord.js": "^13.6.0",
     "dotenv": "^8.2.0",
     "fix": "^0.0.3",
     "fs": "^0.0.1-security",
@@ -47,7 +44,6 @@
     "tunnel-agent": "^0.6.0",
     "util": "^0.12.3",
     "weather-js": "^2.0.0",
-    "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz",
     "xkcd-api": "^1.0.1",
     "yahoo-finance": "^0.3.7"
   }

@@ -1,14 +1,9 @@
 module.exports = {
-    name: '95error',
-    async execute(client, message) {
-        message.channel.send('<a:Loading_Color:759914061696860202> *Loading...*').then(msg => {
-            let thingtosend = message.content.slice(10).rpremovepings()
-            const aaaa = new Discord.MessageEmbed()
-          .setImage("http://atom.smasher.org/error/98.png.php?icon=Error3&title=Error&url=&text=" + encodeURIComponent(thingtosend) + "&b1=&b2=OK")
-        message.channel.send(aaaa);
-            //message.channel.send("http://atom.smasher.org/error/xp.png.php?icon=Error3&title=Error&url=&text=" + encodeURIComponent(thingtosend) + "&b1=&b2=OK")
-            msg.delete();
-            return;
-          });
-    }
+	name: '95error',
+	async execute({ input, message }) {
+		message.channel.send('<a:Loading_Color:759914061696860202> *Loading...*').then(msg => {
+			msg.delete();
+			return new Discord.MessageEmbed().setImage(`http://atom.smasher.org/error/98.png.php?icon=Error3&title=Error&url=&text=${encodeURIComponent(input)}&b1=&b2=OK`);
+		});
+	}
 }

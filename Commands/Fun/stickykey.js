@@ -32,6 +32,6 @@ module.exports = {
         })
         return
         /*/
-        message.channel.send(':x: Soon:tm:')
+        return ':x: Soon:tm:'
     }
 }

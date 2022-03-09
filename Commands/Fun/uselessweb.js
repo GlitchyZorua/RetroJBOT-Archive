@@ -1,4 +1,4 @@
-var sitesList = [
+const sitesList = [
   "https://longdogechallenge.com/",
   "http://heeeeeeeey.com/",
   "http://corndog.io/",
@@ -84,8 +84,7 @@ var sitesList = [
 
 module.exports = {
     name: 'uselessweb',
-    async execute(client, message, args) {
-      var c = sitesList[Math.floor(Math.random() * sitesList.length)]
-      message.channel.send(c)
+    async execute() {
+      return sitesList[Math.floor(Math.random() * sitesList.length)];
     }
 }

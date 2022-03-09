@@ -126,15 +126,12 @@ C = [
 
 module.exports = {
     name: 'manifesto',
-    async execute(client, message, args) {
-      var a0 = A[Math.floor(Math.random() * A.length)]
-var b0 = B[Math.floor(Math.random() * B.length)]
-var c0 = C[Math.floor (Math.random() * C.length)]
-      var embed = new Discord.MessageEmbed()
-      .setColor('#00b7ff')
-      .setTitle(a0+" + "+b0+" = "+ c0)
-  console.log("[MSG]"+a0+" + "+b0+" = "+ c0)
-  message.channel.send(embed)
-          return
+    async execute() {
+      const a0 = A[Math.floor(Math.random() * A.length)],
+        b0 = B[Math.floor(Math.random() * B.length)]
+        c0 = C[Math.floor (Math.random() * C.length)];
+      return new Discord.MessageEmbed()
+        .setColor('#00b7ff')
+        .setTitle(`${a0} + ${b0} = ${c0}`)
     }
 }

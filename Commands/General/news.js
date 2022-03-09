@@ -1,8 +1,8 @@
 module.exports = {
     name: 'news',
-    async execute(client, message) {
+    async execute({ message }) {
+      //this sucks but i cant find the intention
       message.channel.send('<a:Loading_Color:759914061696860202> *Loading*').then(msg => {
-        console.log('[MSG] <a:Loading_Color:759914061696860202> *Loading*');
         msg.delete();
       });
       message.channel.send('https://cdn.discordapp.com/attachments/678402819937796113/759548670772772864/vglitch.png');
