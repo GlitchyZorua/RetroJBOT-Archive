@@ -32,9 +32,6 @@ var quoteList = [
 module.exports = {
     name: 'whatif',
     async execute(client, message, args) {
-      var c = quoteList[Math.floor(Math.random() * quoteList.length)] //quoteList
-      message.channel.send("What if I told you...\n" + c);
-      console.log('[MSG] What if I told you...\n' + c);
-      return
+      return "What if I told you...\n" + quoteList[Math.floor(Math.random() * quoteList.length)];
     }
 }

@@ -1,32 +1,33 @@
-const fs = require('fs')
+const fs = require('fs');
+const Jimp = require('jimp');
 module.exports = {
-    name: 'invert',
-    async execute(client, message) {
-      const Jimp = require('jimp');
-      var thingtosend = message.content.slice(8)
-      message.channel.send('<a:Loading_Color:759914061696860202> *Please wait...*').then(msg => {
-        if(message.attachments.first()) {
-          var imbib = message.attachments.first()
-          var imbibi = imbib.name.toLowerCase()
-          if(imbibi.endsWith('.gif') || imbibi.endsWith('.png') || imbibi.endsWith('.jpg')) { var image = message.attachments.first() } else { return message.reply(':x: File not supported.') };
-        } else if(message.mentions.users.first()) {
-          var aaaa = message.mentions.users.first()
-          var image = 'https://cdn.discordapp.com/avatars/' + aaaa.id + '/' + aaaa.avatar + '.png?size=1024'
-        } else {
-        message.channel.send(":x: No image attached!")
-        return
-        }
-        Jimp.read(image, (err, img) => {
-          if (err) throw err;
-          message.channel.startTyping();
-          img
-           .invert()
-            .write('invert.png')
-            message.channel.send({files: ['invert.png']})
-            message.channel.stopTyping(true);
-        });
-  });
-    }
+	name: 'invert',
+	async execute({ input, message, send }) {
+		message.channel.send('<a:Loading_Color:759914061696860202> *Please wait...*').then(msg => {
+			let image;
+			if (message.attachments.first()) {
+				let imbib = message.attachments.first().name.toLowerCase();
+				if (imbib.endsWith('.gif') || imbib.endsWith('.png') || imbib.endsWith('.jpg')) image = message.attachments.first();
+				else return ':x: File not supported.';
+			} else if (message.mentions.users.first()) {
+				let aaaa = message.mentions.users.first();
+				image = `https://cdn.discordapp.com/avatars/${aaaa.id}/${aaaa.avatar}.png?size=1024`;
+			} else return ":x: No image attached!";
+			console.log(image)
+			Jimp.read(image, async (err, img) => {
+				if (err){
+					throw err;
+				}
+				msg.delete();
+				message.channel.startTyping();
+				await img
+						.invert()
+						.write('invert.png');
+				message.channel.stopTyping(true);
+				send({ files: ['invert.png'] }, true);
+			});
+		});
+	}
 }
 
 

@@ -1,9 +1,10 @@
 const Discord = require('discord.js')
-var cards = [':diamonds:  Ace of Diamonds',':diamonds:  2 Diamonds',':diamonds:  3 Diamonds',':diamonds:  4 Diamonds',':diamonds:  5 Diamonds',':diamonds:  6 Diamonds',':diamonds:  7 Diamonds',':diamonds:  8 Diamonds',':diamonds:  9 Diamonds',':diamonds:  10 Diamonds',':diamonds:  King Diamonds',':diamonds:  Queen Diamonds',':diamonds:  Jack Diamonds',':black_joker: A joker',':hearts: King heart',':hearts: Queen heart',':hearts: Jack heart',':spades: Ace of spades',':spades: 2 spades',':spades: 3 spades',':spades: 4 spades',':spades: 5 spades',':spades: 6 spades',':spades: 7 spades',':spades: 8 spades',':spades: 9 spades',':spades: 10 spades',':spades: King spades',':spades: Queen spades',':spades: Jack spades']
+const cards = [':diamonds:  Ace of Diamonds',':diamonds:  2 Diamonds',':diamonds:  3 Diamonds',':diamonds:  4 Diamonds',':diamonds:  5 Diamonds',':diamonds:  6 Diamonds',':diamonds:  7 Diamonds',':diamonds:  8 Diamonds',':diamonds:  9 Diamonds',':diamonds:  10 Diamonds',':diamonds:  King Diamonds',':diamonds:  Queen Diamonds',':diamonds:  Jack Diamonds',':black_joker: A joker',':hearts: King heart',':hearts: Queen heart',':hearts: Jack heart',':spades: Ace of spades',':spades: 2 spades',':spades: 3 spades',':spades: 4 spades',':spades: 5 spades',':spades: 6 spades',':spades: 7 spades',':spades: 8 spades',':spades: 9 spades',':spades: 10 spades',':spades: King spades',':spades: Queen spades',':spades: Jack spades']
 module.exports = {
     name: 'cards',
-    async execute(client, message, args) {
-        message.channel.send(cards[Math.floor(Math.random() * cards.length)])
+    async execute() {
+        // again not doing this
+        return cards[Math.floor(Math.random() * cards.length)];
     }
 }
 
