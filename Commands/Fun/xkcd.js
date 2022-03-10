@@ -1,4 +1,3 @@
-const superagent = require('superagent');
 const Discord = require('discord.js');
 const xkcd = require('xkcd-api')
 
@@ -15,7 +14,7 @@ module.exports = {
           return
         } else {
           console.log(response);
-          message.channel.send(response)
+          message.channel.send("https://xkcd.com/" + response.num)
           return
         }
       });
@@ -29,7 +28,7 @@ module.exports = {
               return
             } else {
               console.log(response);
-              message.channel.send(response)
+              message.channel.send("https://xkcd.com/" + response.num)
               return
             }
           }); 
@@ -39,7 +38,7 @@ module.exports = {
         if (error) {
           console.error(error);
         } else {
-          console.log(response);
+          console.log("https://xkcd.com/" + response.num);
         }
       });
     }
