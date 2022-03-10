@@ -1,5 +1,0 @@
-x.y.z 
-
-x increases when you rewrite/redesign everything, new project completely, basically
-y increases when you add a feature
-z increases when you fix bug
