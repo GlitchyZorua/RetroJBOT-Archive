@@ -9,7 +9,7 @@ const textToBinary = (str = '') => {
 module.exports = {
 	name: 'texttobinary',
 	async execute({ input }) {
-		if (input === "") return ":x: Syntax error! Synax: j.texttobinary <text>";
+		if (input === "") return ":x: Syntax error! Syntax: j.texttobinary <text>";
 		return "```" + textToBinary(input) + "```";
 	}
 }
