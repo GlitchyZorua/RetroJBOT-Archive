@@ -1,6 +1,7 @@
 require('dotenv').config();
 const fs = require('fs-extra');
 var ver = fs.readFileSync('./Bot Files/ver.txt', { "encoding": "utf-8" })
+console.log('Hello world!')
 console.log(`\
 ########  ######## ######## ########   #######        ## ########   #######  ########
 ##     ## ##          ##    ##     ## ##     ##       ## ##     ## ##     ##    ## 
@@ -8,23 +9,25 @@ console.log(`\
 ########  ######      ##    ########  ##     ##       ## ########  ##     ##    ## 
 ##   ##   ##          ##    ##   ##   ##     ## ##    ## ##     ## ##     ##    ##  
 ##     ## ########    ##    ##     ##  #######   ######  ########   #######     ## 
-                            ╭─────────────────────────────╮')
-                            │ Connecting to discord.js... │')
-                            ╰─────────────────────────────╯')
+                            ╭─────────────────────────────╮
+                            │ Connecting to discord.js... │
+                            ╰─────────────────────────────╯
                     v${ver}`);
 const Discord = require('discord.js');
+console.log("Got discord.js package.")
 const path = require('path');
 const chalk = require('chalk');
 //const animals = require('random-animals-api');
 //var ProgressBar = require('progress');
 //var bar = new ProgressBar(':bar :current/:total', { total: 103 });
 const superagent = require('superagent');
+console.log("Getting the stupid intents that discord forces us to use...")
 const { Intents } = require('discord.js');
 const client = new Discord.Client({ intents: new Intents(13825) });
+console.log('Now logging in to client...') 
 client.login(process.env.TOKEN); // Your token goes here
 client.commands = new Discord.Collection();
-let errors = [];
-
+let errors = []
 console.log("                               ╭───────────────────────────────────╮")
 console.log("                               │ Connected to discord. Now finding │")
 console.log("                               | javascript files.                 │")
@@ -36,8 +39,29 @@ const modules = fs
 
 modules.forEach(module => {
 	console.log(chalk.green(`Loading Module: ${module}`))
-
-	const CMDFiles = fs
+	    if (!fs.existsSync("./Commands/")) {
+		console.error("The commands are missing")
+	    }
+		if (!fs.existsSync("./Events/")){
+			console.error("Yup... EVENTS ARE GONE TOO!")
+		}
+		if (!fs.existsSync("./Bot Files/")){
+			console.error("BOT FILES ARE GONE!")
+		}
+		if (!fs.existsSync(".env")){
+			console.error("ENV file is gone.")
+		    console.log("WHAT HAVE YOU DONE?!")
+			console.log("Double Checking...")
+				if (!fs.existsSync(".env")){
+					console.error("YUP THIS IS >GONE<")
+					console.error("Oh no this is bad this is bad this is bad!")
+					console.error("Cannot start up retrojbot. enviroment is missing.")
+					console.error("EMERGENCY DISCONNECT >> DROPPED.")
+					client.destroy()
+					return
+				}
+		 }
+		const CMDFiles = fs
 		.readdirSync(path.resolve(`Commands/${module}`))
 		.filter(file => !fs.statSync(path.resolve('Commands', module, file)).isDirectory())
 		.filter(file => { return file.endsWith('.js') })

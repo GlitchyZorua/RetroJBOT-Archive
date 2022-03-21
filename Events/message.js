@@ -81,10 +81,10 @@ module.exports = (client, message) => {
 		}
 	} else {
 		console.log(chalk.red(`(${message.author.id} || ${message.author.tag}) An error occurred: Command not found.`))
-		message.channel.send(new Discord.MessageEmbed()
+		const a = new Discord.MessageEmbed()
 			.setColor('RED')
 			.setDescription('Invalid Command. If in doubt, check if: \n- You spelled the command incorrectly\n- Check that its a valid command (j.help)\n - If you want, you can suggest this command with `j.feedback <text>`')
 			.setTitle(':no_entry: Oops.')
-		)
+        message.channel.send({ embeds: [a] })
 	}
 }

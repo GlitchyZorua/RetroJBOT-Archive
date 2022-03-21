@@ -1,0 +1,172 @@
+#######################################################################################
+#                                      KEYS                                           #
+#######################################################################################
+#          done = means that the command has successfully been fully rewritten        #
+#                            skip = skips this                                        #
+#                       fail = i failed to migrate it                                 #
+#                    on hold = it's gonna be there later                              #
+#             partly done = most of it is done, but will do rest later                #
+#######################################################################################
+
+
+
+***General Commands***
+done j.help - List of commands
+done j.ping - Pong!
+done j.feedback <text> - Give us feedback!
+skip [x] j.privatefeedback <text> - Give us feedback (Private)
+done j.news - Something new about the bot
+done j.invite - Invite to our server and our bot.
+done j.test - test the bot commands
+done j.servercount - Tells you how many servers that this bot is in
+done j.reacttest - Test the reactions
+done j.emojitest - Test Emojis
+done j.about - About our bot
+
+
+***Image commands***
+done j.undertale <text> ([<text>=<text>]) - Make a undertale text box! For adjusting its properties, please visit this site https://urls.ziad87.net/pRlJD0 (Warning: Its pretty confusing), for other help on the api, https://urls.ziad87.net/eBYq4 If image doesnt appear, but the link does, Open the link to see the image, or try again.
+done j.tw <text> - Typewriter font!
+done j.inspirobot - Get a quote from Inspirobot
+done j.xperror <text> - make an windows xp error
+done j.95error <text> - make an windows 95 error
+done j.steamemote <steam emote name> - get a steam emote. when it shows a link instead of image, it means the emote doesn't exist.
+done j.invert <attachment/@mention> - Invert image. WIP.
+
+***Moderation Commands***
+done j.ban^ <user> [reason] - Forces a user to leave but cant join back
+done j.kick^ <user> - Forces a user to leave
+done j.purge^ <number> - purges the number of messages that is inputed in.
+done j.purgecia^ - The contents of this command are classified. (Purges Everything. Not everything, though)
+done j.purgecus^ <text> - Just like j.purgcia, but with a custom message.
+skip [x] j.purgev2^^ <text> - THIS DELETES ALL MESSAGES, CHANNELS, ETC, AND REMAKES THEM. But, its broken, so.. :P
+done j.slowmode^ <#> - Set the slowmode on the channel.
+done j.setnsfw^ <(on|off)> - Turn NSFW on or off
+done j.veriflvl^ <(none|low|medium|high|highest|0|1|2|3|4)> - Change the verification level
+done j.hackban^ <id> [reason] - Ban someone outside of your server
+
+***Text Edit Commands***
+"Couldn't figure out what to call these commands."
+partly done j.uppercase <text> - Changes all text to caps (aliases: j.uc)
+partly done j.lowercase <text> -changes all text to lowercase (aliases: j.ls)
+done j.say <text> - Makes the bot say something
+done j.nsay <text> - Makes the bot say something, then deletes your message afterwards
+done j.scramble <text> - Scrambles the text.
+done j.thot <text> - BEGONE THOT!
+done j.vaporwave <text> - Spaces your text on every character. l i k e  t h i s.
+done j.claptext <text> - Writes👏your👏text👏like👏this.
+done j.cowsay <text> - Make a cow say something
+done j.reverse <text> - Reverse your text
+done j.figlet <text> - makes some cool text art
+
+
+
+***Roleplay commands***
+"Some roleplay commands that I put for no reason"
+skip [x] j.fuck <user or something> - Just... Dont...
+done j.hug <user or something> - Hug someone!
+done j.snuggle <someone or idk> - Snuggle Someone!
+done j.kill <user or something> - Kill someone... oh boi.
+done j.slap <user or something> - Slap Someone!
+partly done j.angry/j.mad - ARE YA ANGRY?!
+done j.sad - Boo Hoo...
+done j.happy - Cheerful, Lighthearted, Emotion!
+done j.nuzzle <text> - Nuzzle Someone!
+done j.microwave <text> - Throw someone in the microwave!
+done j.revive <text> - Revive someone!
+done j.distract <text> - Distract Someone!
+
+***Animal Commands***
+"Shows cute photos of animals. For some reason some of them are broken :("
+done j.dog - Gets a dog photo
+done j.cat - Gets a cat photo
+done j.fox - Gets a random fox boi
+done j.honk - Gets a desktop goose meme.
+skip [x] j.bird - Gets a bird photo
+skip [x] j.lizard - Gets a lizard
+skip [x] j.tiger - Gets a random tiger boi.
+done j.owl - Gets a random owl boi! OwOl
+skip j.shiba - gets a shiba
+skip [x] j.redpanda - gets a red panda
+skip [x] j.panda - gets a panda
+skip [x] j.penguin - gets a penguin
+
+***Utilities commands***
+"I guess i'm useful after all."
+done j.calc <your math problem> - Calculates your math.
+done j.time - Tells you the time. Not accurate!
+done j.date - Tells you the date. Not accurate...?
+done j.itc <#> - Converts inches to centimeters, I think?
+done j.ctf <#> - C degrees to F degrees
+done j.ftc <#> - F degrees to C degrees
+done j.guildid - View the guild id.
+skip [x] j.msgsent - see how much messages u sent
+skip [x] j.wiki <search> - Search on wikipedia
+done j.unixtime - Whats the unix time?
+done j.at - Advanced date and time
+
+***Fun Commands***
+"Commands that are fun"
+done j.8ball [whatever u want] - Shake the magic 8ball!
+skip j.9ball [question] - just an old version of the 8ball. nothing really special.
+done j.69ball [question] - Lws funny ball!!1111
+skip j.1ball [anything] - Are you fired, or not?
+done j.yesno [question] - Only ask a yes or no question, just like the 8ball
+done j.lol - Says Haha Funny!
+partly done j.hi - Says hello. (aliases: j.hello)
+done j.oof - I am pissed.
+done j.countsa - See how much there is in the commuity counter
+done j.addsac - Add +1 to the community counter.
+done j.retrojbot - thats me
+done j.donothing - A command that doesn't do anything
+done j.ss <message> - Send a message to our server. If you post any nsfw, you will be banned from using j.ss without any warning (aliases: j.serversend)
+done j.dice [number] - Roll the dice! (aliases: j.roll)
+done j.coinflip [(tails|heads)] - Tails or heads?
+done j.d20 - Rolls a d20.
+skip [x] j.s1 <add more shit to make it more chaos> - generates random shit to make nonsense
+done j.gay <anything you want> - how gay are you?
+done j.rate <anything> - Let me rate something!
+done j.HALPMEIHAVETOOMANYDONUTSPLSS - AAAAAAAAAAA TOO MANY DOUGHNUTS!!!
+done j.winxp - WINDOWS XD. This command was from 12bot. Sadly, they didnt have it on 01337, and its now here for nostalgia.
+done j.shrek - I AM SHREK. This command was from 12bot. Sadly, they didnt have it on 01337, and its now here for nostalgia
+done j.cook <text> - Cook something.
+done j.td [(true|dare)] - Truth or dare?
+done j.cards - Get a random card
+done j.donut - Have a donut!
+done j.42 - Just another old command from 12bot.
+done j.assistant <text> - Ask me a favor, or have a conversation, I guess.
+done j.fact - Get a useful/useless fact. Learn something new.
+done j.manifesto - Get a windows 93 manifesto.
+done j.joke - Get a random joke.
+done j.pokemon <pokemon_name> - Gets a info about a Pokémon.
+done j.whatif - get a random what if meme.
+skip [x] j.owo - OwO?
+done j.fortune - Don't have a fortune cookie? Already have one? or maybe you were bored. Either way, this will give you a random fortune
+
+***Game Commands***
+Games that should keep you busy.
+done j.cp0 (<heads|tails>) - j.coinflip, but you have to guess it.
+done j.fish - just fish, i guess
+done j.slots - Play a game of slots
+done j.rps (<rock|paper|sissors>) - Play a game of rock paper sissors
+
+
+***Music/Voice Commands***
+[EXPERMENTAL] Music commands
+These Commands are currently WIP. Please play music by pasting a link from yt. not by keyword.
+done [x] j.play <youtube url> - Play Music
+done j.stop - Stop Music
+
+*** Admin Commands ***
+done j.eval^^^ <js> - Evalate code on bot
+done j.req - Check to see if you have admin.
+done j.die ^^^ - Kills the bot
+done j.sban <id> ^^^ - Ban someone off of ss
+skip j.live - T-Turns on the bot?
+done j.bogrant <id>^^^ - Grant a user bot admin
+done j.sas (<on|off>)^^^ - Stops all services. This will prevent from users using j.ss and j.feedback!
+skip j.boadin^^^ - View confidential info regarding the bot. Bot admin info.
+skip [x] j.recovermode^^^^ (<yes|no>) - set the bot to recover mode.
+done j.changestatus^^^ (<online|invisible|idle|dnd>) - Change the online status
+done j.frozestatus^^^ (<yes|no>) - Stop the status from changing itself.
+done j.sfs <text>^^^ - Server Force Send. it allows you to send a message to ss without any ping filters or a cooldown

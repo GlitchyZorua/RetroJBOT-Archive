@@ -1,0 +1,114 @@
+* = released
+[current] = the current version
+
+
+RetroJBOT Apple Edition Again... *
+RetroJBOT Banana Edition Again... *
+RetroJBOT Carrot Edition  Again... *
+RetroJBOT Lemon Edition Again... *
+RetroJBOT Lime Edition Again... *
+RetroJBOT Orange Edition Again... *
+RetroJBOT Pie Edition Again... *
+RetroJBOT Avocado Edition Again... * [current]
+RetroJBOT Cherry Edition Again...
+RetroJBOT Green Apple Again...
+--------------------------
+RetroJBOT Acerola Edition
+RetroJBOT Apricots Edition
+RetroJBOT Grape Edition
+RetroJBOT Grass Edition
+RetroJBOT Flower Edition
+RetroJBOT Fig Edition
+RetroJBOT GrapeFruit Edition
+RetroJBOT Candy Edition
+RetroJBOT Mango Edition
+RetroJBOT BlackBerries Edition
+RetroJBOT Blackcurrant Edition
+RetroJBOT Blueberry Edition
+RetroJBOT Bread Edition
+RetroJBOT Breadfruit Edition
+RetroJBOT Cantaloupe Edition
+RetroJBOT Camrambola Edition
+RetroJBOT Cherimoya Edition
+RetroJBOT Clmentine Edition
+RetroJBOT Coconut Edition
+RetroJBOT Coconut Meat Edition
+RetroJBOT Cranberries Edition
+RetroJBOT Crustard-Apple Edition
+RetroJBOT Date Fruit Edition
+RetroJBOT Durian Edition
+RetroJBOT Elderberries Edition
+RetroJBOT Feijoa Edition
+RetroJBOT Gooseberries Edition
+RetroJBOT Guava Edition
+RetroJBOT Honey Edition
+RetroJBOT Honeydew Melon Edition
+RetroJBOT Melon Edition
+RetroJBOT Jackfruit Edition
+RetroJBOT Java-Plum Edition
+RetroJBOT Longan Edition
+RetroJBOT Loquat Edition
+RetroJBOT Lychee Edition
+RetroJBOT Mangosteen Edition
+RetroJBOT Mulberries Edition
+RetroJBOT Nectarine Edition
+RetroJBOT Olives Edition
+RetroJBOT Papaya Edition
+RetroJBOT Passion Fruit Edition
+RetroJBOT Peaches Edition
+RetroJBOT Pear Edition
+RetroJBOT Persimmon Edition
+RetroJBOT Pitaya Edition
+RetroJBOT Pineapple Edition
+RetroJBOT Pitanga Edition
+RetroJBOT Plantain Edition
+RetroJBOT Prune Edition
+RetroJBOT Pomegrnate Edition
+RetroJBOT Raspberries Edition
+RetroJBOT Rhubarb Edition
+RetroJBOT Rose-Apple Edition
+RetroJBOT Sapodilla Edition
+RetroJBOT Sapote Edition
+RetroJBOT Mamey Edition
+RetroJBOT Soursop Edition
+RetroJBOT Sugar-Apple Edition
+RetroJBOT Tamarind Edition
+RetroJBOT Tangerine Edition
+RetroJBOT Water Edition
+RetroJBOT Watermelon Edition
+RetroJBOT Omega Edition
+RetroJBOT Omega 2 Edition
+RetroJBOT Omega 3 Edition
+RetroJBOT Omega 4 Edition
+RetroJBOT Omega 5 Edition
+RetroJBOT Omega 6 Edition
+RetroJBOT Omega 7 Edition
+RetroJBOT Omega 8 Edition
+RetroJBOT Omega 9 Edition
+RetroJBOT Omega 10 Edition
+RetroJBOT Leather Edition
+RetroJBOT Wooden Edition
+RetroJBOT Iron Edition
+RetroJBOT Gold Edition
+RetroJBOT Diamond Edition
+RetroJBOT Ruby Edition
+RetroJBOT Sapphire Edition
+RetroJBOT Leather King Edition
+RetroJBOT King Edition
+RetroJBOT Wooden King Edition
+RetroJBOT Iron King Edition
+RetroJBOT Golden King Edition
+RetroJBOT Diamond King Edition
+RetroJBOT Ruby King Edition
+RetroJBOT Sapphire King Edition
+
+Math Editions
+RetroJBOT Pi Edition
+RetroJBOT Ojproj Edition
+
+April Fools
+RetroJBOT Furry Edition
+
+
+Music
+RetroJBOT Disco Edition

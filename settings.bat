@@ -1,3 +1,4 @@
+:: Ah yes, back to the old batch script.
 @echo off
 :b
 cls
@@ -55,11 +56,9 @@ node
 :c
 color 79
 echo Welcome to recovery mode
-echo An error occurred. Recovery Mode cannot be opened.
-pause
-echo Recovery mode will now close.
-pause
-goto b
+:: echo An error occurred. Recovery Mode cannot be opened.
+:: echo Recovery mode will now close.
+:: goto b
 echo Please select an option
 cmdMenuSel f870 "> Help" "> System Wipe" "> SFC Scan" "> Reinstall the bot" "> Back"
 
@@ -85,7 +84,7 @@ if %ERRORLEVEL% == 1 goto c
 :passpls
 echo WARNING!
 echo By going to system wipe. you agree that this will wipe EVERYTHING. NPM, etc... It may take some time to do this so please. I do recommend going back. I AM NOT RESPONSIBLE FOR THE DAMAGES THAT YOU DONE. THIS MEANS THAT YOU CANNOT RESTORE ANY OF THE FILES ONCE THEY ARE GONE!
-echo Password is reqired. 
+echo Password is reqiured. 
 goto pass
 
 :Pass
@@ -96,8 +95,15 @@ if not %input%==microsoft32hahahahahe5etdthgcfghc goto NO
 
 :YES
 echo LAST WARNING. DO YOU WISH TO START?
-cmdMenuSel f870 "> Back" 
+cmdMenuSel f870 "NO" "YES"
 if %ERRORLEVEL% == 1 goto c
+if %ERRORLEVEL% == 2 goto wipeEVERYTHING
+
+:wipeEVERYTHING
+del *.*
+echo Done.
+exit
+
 :NO
 
 Echo INCORRECT PASSWORD.
