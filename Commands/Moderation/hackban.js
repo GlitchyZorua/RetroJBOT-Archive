@@ -3,7 +3,8 @@ module.exports = {
 	name: 'hackban',
 	async execute({ args, client, message }) {
 		if (message.channel instanceof Discord.DMChannel) return ":no_entry_sign: You cannot use this command in dms.";
-		if (!message.member.hasPermission("BAN_MEMBER")) return "Your permissions forbid you to ban someone.";
+		//discord.js removed the "message.member.hasPermission()" permission so uh yeah.
+		if (!message.member.permissions.has("BAN_MEMBERS")) return ":x: Your permissions forbid you to ban someone.";
 		if (args === []) return ":x: Syntax Error! Syntax: j.hackban <@> [reason]";
 
 		const reason = args.slice(1).join(" ");
@@ -22,7 +23,7 @@ module.exports = {
 			send(giflol);
 		}).catch(err => {
 			console.error(err);
-			send("Unable to ban this user. They are probably not in a server that retrojbot is in, or Missing `BAN_MEMBER` Permission. If this error happends even if the arguments are correct, then this might be a bug. Contact my creator if it is.");
+			send(":x: Unable to ban this user. Either missing `BAN_MEMBER` Permission, or they don't exist. If this error happends even if the arguments are correct, then this might be a bug. Contact my creator if it is.");
 		});
 	}
 }

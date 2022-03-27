@@ -3,7 +3,7 @@ module.exports = {
 	name: 'kick',
 	async execute({ message, input, send }) {
 		if (message.channel instanceof Discord.DMChannel) return ':no_entry_sign: You cannot use this command in dms.';
-		if (!message.member.hasPermission("KICK_MEMBER")) return '⛔ Your permissions forbid you to kick someone.';
+		if (!message.member.Permission.has("KICK_MEMBER")) return '⛔ Your permissions forbid you to kick someone.';
 		//    if (permArray.indexOf(true) == -1) {
 		//      message.reply('Your permissions forbid you to ban someone.');
 		//      return

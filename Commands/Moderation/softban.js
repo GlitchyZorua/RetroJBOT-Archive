@@ -3,7 +3,7 @@ module.exports = {
 	name: 'softban',
 	async execute({ args, send, message }) {
 		if (message.channel instanceof Discord.DMChannel) return ':no_entry_sign: You cannot use this command in dms. You can\'t just ban me off of my DMS! That\'s IMPOSSIBLE.';
-		if (!message.member.hasPermission("BAN_MEMBER")) return ':hammer: :no_entry: Your permissions forbid you to ban someone. You must have `BAN_MEMBER`';
+		if (!message.member.Permission.has("BAN_MEMBER")) return ':hammer: :no_entry: Your permissions forbid you to ban someone. You must have `BAN_MEMBER`';
 
 
 		//    if (permArray.indexOf(true) == -1) {

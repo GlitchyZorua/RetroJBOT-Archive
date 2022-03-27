@@ -2,8 +2,7 @@ const Discord = require('discord.js')
 module.exports = {
 	name: 'veriflvl',
 	async execute(client, message) {
-		return "Not dealing with this, the command was broken anyway";
-		let thingtosend = message.content.slice(11).removepings()
+		return ":x: This is coming soon.";
 		if (message.channel instanceof Discord.DMChannel) {
 			message.channel.send(':no_entry_sign: You cannot use this command in dms.');
 			return;
