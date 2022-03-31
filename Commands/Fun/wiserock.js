@@ -33,15 +33,27 @@ module.exports = {
                             style: "SUCCESS",
                             customId: "bad"
                         },
+                        {
+                        type: "BUTTON",
+                        label: "Quit",
+                        style: "DANGER",
+                        customId: "quit"
+                    }
                     ]
                 }
             ]
         });
+        
         const filter = (button) => button.user.id === message.author.id;
-        const collector = sentMessage.createMessageComponentCollector({ filter: filter, max: 1, time: 60000, componentType: "BUTTON" });
-
+        const collector = sentMessage.createMessageComponentCollector({ filter: filter, max: 1, time: 60000, componentType: "BUTTON"});
         collector.on("collect", interaction => {
+            if (interaction.customId == "quit"){ interaction.reply(`<:Big_wise_rock:946959662320877589> Feel free to come back anytime for advice!`); return }
             const rock = (...message) => `<:Big_wise_rock:946959662320877589> ${String.raw(...message)}`;
+            talkedRecently.add(authorId);
+            setTimeout(() => {
+                // Removes the user from the set after 9 seconds
+                talkedRecently.delete(authorId);
+            }, 9000);  
             // use rock`message` (I Love template tagging!)
             interaction.reply(rock`Understood. Here is your advice.`);
 
@@ -52,12 +64,8 @@ module.exports = {
 
             setTimeout(function() {
                 send(rock`Hope this helps!`);
+                return
             }, 2000);
-            talkedRecently.add(authorId);
-            setTimeout(() => {
-                // Removes the user from the set after 9 seconds
-                talkedRecently.delete(authorId);
-              }, 9000);
         })
     }
 }
