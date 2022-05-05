@@ -17,6 +17,6 @@ module.exports = {
 	}
 }
 
-// Code created by haryie.
+// Orginally created by haryie. 
 // Rest in peace haryie, you will be missed.
 //             2005 - 2021🌹

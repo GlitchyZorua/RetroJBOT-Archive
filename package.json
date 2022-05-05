@@ -45,6 +45,7 @@
     "tunnel-agent": "^0.6.0",
     "util": "^0.12.3",
     "weather-js": "^2.0.0",
+    "win-eject": "^1.0.2",
     "xkcd-api": "^1.0.1",
     "yahoo-finance": "^0.3.7"
   }

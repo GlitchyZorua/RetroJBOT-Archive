@@ -9,8 +9,7 @@ module.exports = {
 		if (isNaN(input)) return ':x: Numbers only. (tip: you can type j.slowmode off or 0 to turn it off)';
 		if (input > 21600) return ':x: You cannot go higher then 21600.';
 		if (input < 0) return ':x: You cannot go lower then 0.';
-
-		if (["off", "0", "disable","false","no","zero","0"].includes(input.toLowerCase())) {
+		if (["off", "0", "disable","false","no","zero","0",'nana','iwaslookinginthebotscodebutturnitoffforrealzplease','iwaslookinginthecode','stop','shutitdown','shutdown'].includes(input.toLowerCase())) {
 			message.channel.setRateLimitPerUser(0);
 			return '> :snail: ❎ Slowmode is off.';
 		}

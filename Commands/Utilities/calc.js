@@ -127,17 +127,19 @@ function filters(str) {
 		.replace(/:heavy_division_sign:/i, "/")
 		.replace(/:heavy_plus_sign:/i, '+')
 		.replace(/:heavy_minus_sign:/i, '-')
+		/*/
 		//                                                                        Phrases
-		.replace(/the loneliest number/i, 1) // When putting numbers, javascript allows you to put them in without quotation marks, which makes things alot easier.
-		.replace(/how many horns does a unicorn have/i, 1)
-		.replace(/the answer to the ultimate question of life the universe and everything/i, 42)
-		.replace(/the answer to life the universe and everything/i, 42)
-		.replace(/bakers dozen/i, 13)
-		.replace(/baker's dozen/i, 13)
-		.replace(/devils number/i, 666)
-		.replace(/funny number/i, 69)
-		.replace(/weed number/i, 420)
-		.replace(/leet number/i, 1337)
+		.replace(/theloneliestnumber/m, 1) // When putting numbers, javascript allows you to put them in without quotation marks, which makes things alot easier.
+		.replace(/howmanyhornsdoesaunicornhave/m, 1)
+		.replace(/theanswertotheultimatequestionoflifetheuniverseandeverything/m, 42)
+		.replace(/theanswertolifetheuniverseandeverything/m, 42)
+		.replace(/bakersdozen/m, 13)
+		.replace(/baker'sdozen/m, 13)
+		.replace(/devilsnumber/m, 666)
+		.replace(/funnynumber/m, 69)
+		.replace(/weednumber/m, 420)
+		.replace(/leetnumber/m, 1337)
+		/*/
 };
 //var nanieegg = ['NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaN', 'NaNi?','NaN','NaN','NaN','Omae wa moe shindu. NaNi?','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN']
 module.exports = {
@@ -150,6 +152,8 @@ module.exports = {
 		if (arg === "") return ":x: Syntax Error! Syntax: j.calc <text>";
 		if (arg === "egg") return ":egg:";
 		if (arg === "once in a blue moon") return "🖩 once in a blue moon = 1.16699016 × 10^−8 hertz";
+		if (arg === "does 9+10=21?") return "🖩 no."
+		if (arg === "fuck you") return "🖩 That's rude :("
 		/*/
 		var nanieeggyes = nanieegg[Math.floor(Math.random() * nanieegg.length)]
 		if (!a) return message.channel.send("🖩 " + nanieeggyes)

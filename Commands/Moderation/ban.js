@@ -4,7 +4,6 @@ module.exports = {
 	async execute({ args, message, send }) {
 		if (message.channel instanceof Discord.DMChannel) return ':no_entry_sign: You cannot use this command in dms. You can\'t just ban me off of my DMS! That\'s IMPOSSIBLE.';
 		if (!message.member.permissions.has("BAN_MEMBERS")) return ':hammer: :no_entry: Your permissions forbid you to ban someone. You must have `BAN_MEMBER`';
-
 		const user = message.mentions.users.first();
 		// If we have a user mentioned
 		if (user) {

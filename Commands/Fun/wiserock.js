@@ -8,7 +8,7 @@ const talkedRecently = new Set();
 module.exports = {
     name: 'wiserock',
     async execute({ message, send, authorId}) {
-        if (talkedRecently.has(authorId)) return ":alarm_clock: **Cooldown** Sorry. You need to wait 9 seconds to use this command. Be patient or i will cut Basil in half.... hehehehe. 🍉";
+        if (talkedRecently.has(authorId)) return ":alarm_clock: **Cooldown** Sorry. You need to wait 60 seconds to use this command. Be patient or i will cut Basil in half.... hehehehe. 🍉";
         const sentMessage = await message.channel.send({
             content: "<:Big_wise_rock:946959662320877589> Hi, I'm the Wise Rock! I give solid advice in exchange for ~~clams~~ Free!\n\n\nWhat kind of advice would you like me to give?",
             components: [
@@ -46,14 +46,15 @@ module.exports = {
         
         const filter = (button) => button.user.id === message.author.id;
         const collector = sentMessage.createMessageComponentCollector({ filter: filter, max: 1, time: 60000, componentType: "BUTTON"});
+        //setTimeout(() => { send(`<:Big_wise_rock:946959662320877589> Hello? Helloooo? Is there anyone there...? Hmph... I'm just a lonely rock after all... :(\n:timer: You took too long to respond!`)        }, 60000);  
         collector.on("collect", interaction => {
             if (interaction.customId == "quit"){ interaction.reply(`<:Big_wise_rock:946959662320877589> Feel free to come back anytime for advice!`); return }
             const rock = (...message) => `<:Big_wise_rock:946959662320877589> ${String.raw(...message)}`;
             talkedRecently.add(authorId);
             setTimeout(() => {
-                // Removes the user from the set after 9 seconds
+                // Removes the user from the set after 60 seconds
                 talkedRecently.delete(authorId);
-            }, 9000);  
+            }, 60000);  
             // use rock`message` (I Love template tagging!)
             interaction.reply(rock`Understood. Here is your advice.`);
 

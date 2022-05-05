@@ -5,7 +5,7 @@ module.exports = {
 	name: 'bogrant',
 	async execute({ message, input, client }) {
 		if (!adminlist.admins.includes(message.author.id)) {
-			message.channel.send(':x: Error: No Admin!')
+			message.channel.send(':x: Error: You are not the admin of this bot.')
 			return;
 		}
 		if (input === "") {

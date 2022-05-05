@@ -30,6 +30,10 @@ module.exports = {
 				const faha = Number(current.feelslike);
 				const fahfinala = Math.round((faha - 32) / 1.8);
 				const kelvin = Math.round((faha - 32) / 1.8) + 273.15;
+				const kel_fl = Math.round((faha - 32) / 1.8) + 273.15;
+				const rankine = Math.round((fahfinal + 273.15) * 9/5.0);
+				const rankine_feellike = Math.round((faha + 273.15) * 9/5.0);
+				
 				const weatherinfo = new Discord.MessageEmbed()
 					.setDescription(` **${current.skytext}**`)
 					.setAuthor(`⚠ Be careful! Do not choose where you live if you are issuing the command from a public server. To Respect your privacy, it is highly recommended that you run this command in dms\n\n\nWeather forecast for ${current.observationpoint}`)
@@ -37,9 +41,9 @@ module.exports = {
 					.setColor(0x111111)
 					.addField(':clock3: Timezone', `UTC${location.timezone}`, true)
 					//.addField(':test_tube: Degree Type', '°F and °C (using j.ftc, might not be accurate)', true)
-					.addField(':thermometer: Temperature', `Fahrenheit: ${current.temperature}°F \nCelsius: ` + fahfinal + '°C ' + '\nKelvin: ' + kelvin + ' K', true)
+					.addField(':thermometer: Temperature', `Fahrenheit: ${current.temperature}°F \nCelsius: ` + fahfinal + '°C ' + '\nKelvin: ' + kelvin + ' K'+' Rankine: '+rankine+'°R', true)
 					.addField(':wind_blowing_face: Wind', current.winddisplay, true)
-					.addField('Feels like', `Fahrenheit: ${current.feelslike}°F\nCelsius: ` + fahfinala + '°C' + '\nKelvin: ' + kelvin + ' K', true)
+					.addField('Feels like', `Fahrenheit: ${current.feelslike}°F\nCelsius: ` + fahfinala + '°C' + '\nKelvin: ' + kel_fl + ' K'+' Rankine: '+rankine_feellike+'°R', true)
 					.addField('Humidity', `${current.humidity}%`, true);
 				send(weatherinfo);
 				msg.delete();
