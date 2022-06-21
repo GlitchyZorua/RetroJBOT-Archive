@@ -11,8 +11,9 @@ RetroJBOT Orange Edition Again... *
 RetroJBOT Pie Edition Again... *
 RetroJBOT Avocado Edition Again... *
 RetroJBOT Chungus Edition * 
-RetroJBOT Cherry Edition Again... * [current]
-RetroJBOT Green Apple Edition Again...
+RetroJBOT Cherry Edition Again... * 
+RetroJBOT Green Apple Edition Again... *
+RetroJBOT Rewritten Rat Edition * [current]
 RetroJBOT Yellow Apple Edition
 --------------------------
 RetroJBOT Acerola Edition
