@@ -13,7 +13,7 @@ Discord Server: https://discord.gg/EYt579b
 
 It is highly recommended that you run RetroJBOT on a server running on a Windows 10. Windows 8/8.1 Might work, but untested
 
-Linux is not yet supported, maybe when I find a way, Linux will be supported
+Linux is not yet tested
 # Licensing
 
 ## GNU AFFERO GENERAL PUBLIC LICENSE
