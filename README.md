@@ -1,3 +1,7 @@
+THIS IS ARCHIVED. WE MOVED TO https://github.com/Jacobw0/RetroJBOT-TS
+
+
+
 # RetroJBOT
 A discord bot by Jacobw
 
