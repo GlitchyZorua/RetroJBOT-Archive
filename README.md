@@ -1,4 +1,12 @@
-THIS IS ARCHIVED. WE MOVED TO https://github.com/Jacobw0/RetroJBOT-TS
+
+
+
+
+# THIS IS ARCHIVED. WE MOVED TO https://github.com/Jacobw0/RetroJBOT-TS
+# YOU CAN SELF-HOST IT, BUT THERE ARE MANY SECURITY VULNERABILITIES WITH IT.
+
+
+
 
 
 
