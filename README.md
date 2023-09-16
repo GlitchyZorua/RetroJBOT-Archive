@@ -2,7 +2,7 @@
 
 
 
-# THIS IS ARCHIVED. WE MOVED TO https://github.com/Jacobw0/RetroJBOT-TS
+# THIS IS ARCHIVED. WE MOVED TO https://github.com/GlitchyZorua/RetroJBOT-TS
 # YOU CAN SELF-HOST IT, BUT THERE ARE MANY SECURITY VULNERABILITIES WITH IT.
 
 
@@ -11,11 +11,11 @@
 
 
 # RetroJBOT
-A discord bot by Jacobw
+A discord bot by GlitchyZorua
 
 RetroJBOT is a multi-purpose bot.
 
-Command List: https://gist.github.com/Jacobwworkman/e2c1ce52e0c1edeab2405e8d3e7259b0
+Command List: https://gist.github.com/GlitchyZorua/e2c1ce52e0c1edeab2405e8d3e7259b0
 
 Bot invite: https://urls.ziad87.net/8SjwND / https://discord.com/oauth2/authorize?client_id=612742660658167840&permissions=8&scope=bot
 
