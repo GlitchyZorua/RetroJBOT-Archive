@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jacobwworkman/RetroJBOT.git"
+    "url": "git+https://github.com/GlitchyZorua/RetroJBOT.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jacobwworkman/RetroJBOT/issues"
+    "url": "https://github.com/GlitchyZorua/RetroJBOT/issues"
   },
-  "homepage": "https://github.com/Jacobwworkman/RetroJBOT#readme",
+  "homepage": "https://github.com/GlitchyZorua/RetroJBOT#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "d.js": "^0.7.5",
