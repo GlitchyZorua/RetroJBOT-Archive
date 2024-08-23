@@ -22,7 +22,7 @@ if %ERRORLEVEL% == 3 goto d
 :b
 echo Running Node...
 
-:: start C:\Users\Jacob Workman\Desktop\RetroJBOT-main\Bot Files\Files\TorBrowser\Tor\tor.exe
+:: start C:\Users\user\Desktop\RetroJBOT-main\Bot Files\Files\TorBrowser\Tor\tor.exe
 :: using tor was a mistake. *sigh*
 node index.js --unhandled-rejections=strict
 cmdMenuSel f870 "1. Restart" "2. Exit" "3. Settings"
