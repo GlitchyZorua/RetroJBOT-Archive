@@ -74,7 +74,7 @@ module.exports = (client, message) => {
 			console.error(e);
 			message.channel.send(new Discord.MessageEmbed()
 				.setColor('RED')
-				.setDescription('The bot has detected something REALLY wrong with the bots files. You really shouldnt see this message, Please contact my creator: Jacobw#8117. Software Halted. I have printed out an emergency error message below. \n\n\n```js\n' + e + '```')
+				.setDescription('The bot has detected something REALLY wrong with the bots files. You really shouldnt see this message, Please contact my creator: glitchyzorua. Software Halted. I have printed out an emergency error message below. \n\n\n```js\n' + e + '```')
 				.setTitle('Critical Error')
 				.setImage('https://cdn.pixabay.com/photo/2017/02/12/21/29/false-2061132_960_720.png')
 			)
